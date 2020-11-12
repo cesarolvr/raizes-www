@@ -4,6 +4,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width: $m) {
+    padding: 15px;
+  }
 }
 
 .menu-list {
@@ -27,6 +31,14 @@
   flex-direction: column;
   list-style: none;
 
+  @media (min-width: $m) {
+    position: relative;
+    flex-direction: row;
+    pointer-events: auto;
+    opacity: 1;
+    z-index: 1;
+  }
+
   &.-is-opened {
     z-index: 10;
     pointer-events: auto;
@@ -39,6 +51,12 @@
     padding: 5px;
     margin: 20px 0px;
     position: relative;
+
+    @media (min-width: $m) {
+      font-size: 0.9em;
+      margin: 0px 20px;
+      padding: 0 5px;
+    }
 
     &:after {
       content: "";
@@ -64,11 +82,4 @@
       text-decoration: none;
     }
   }
-}
-
-.logo {
-  margin: 0;
-  width: 93px;
-  position: relative;
-  z-index: 40;
 }
