@@ -1,0 +1,69 @@
+.footer {
+  background-color: $blue-1;
+  color: white;
+  padding: 50px 0px;
+
+  .logo {
+    width: 100px;
+  }
+
+  hr {
+    width: 100%;
+    height: 1px;
+    opacity: 0.3;
+    background-color: $gray-1;
+    margin: 20px 0;
+  }
+
+  .menu-footer {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.9em;
+
+    .item {
+      width: 50%;
+      flex-shrink: 0;
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .menu-contact {
+    .address {
+      max-width: 50%;
+      margin-bottom: 30px;
+      font-size: 0.9em;
+    }
+
+    .copyright {
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  @media (min-width: $m) {
+    .holder {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .menu-contact {
+      margin: 30px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .address {
+        max-width: 30%;
+        text-align: right;
+      }
+    }
+  }
+}

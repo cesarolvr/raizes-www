@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import classnames from "classnames"
 
 // Mock
-import { links } from "./mock"
+import { links } from "../../mock"
 
 // Components
 import Logo from "../Logo/index"

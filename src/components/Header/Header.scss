@@ -1,9 +1,13 @@
 .header {
   background: $blue-1;
-  padding: 20px;
+  padding: 15px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  .logo {
+    margin-left: 15px;
+  }
 
   @media (min-width: $m) {
     padding: 15px;
@@ -69,7 +73,7 @@
       top: 100%;
       margin: 0 auto;
       transform: scaleX(0);
-      transition: transform .3s ease;
+      transition: transform 0.3s ease;
     }
     &:hover {
       &:after {

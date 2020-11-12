@@ -9,6 +9,7 @@ import React from "react"
 
 // Styles
 import "./Base.scss"
+import "./Layout.scss"
 
 const Layout = ({ children }) => {
   return (
