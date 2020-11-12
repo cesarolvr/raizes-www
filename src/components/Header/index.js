@@ -1,42 +1,45 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from "react"
+import classnames from "classnames"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
+// Mock
+import { links } from "./mock"
+
+// Components
+import Logo from "../Logo/index"
+import Hamburguer from "../Hamburguer"
+
+// Style
+import "./Header.scss"
+
+const Header = () => {
+  const [isMenuOpened, setIsMenuOpened] = useState(false)
+
+  return (
+    <header className="header">
+      <div className="holder">
+        <Logo />
+      </div>
+      <div className="holder">
+        <ul
+          className={classnames("menu-list", {
+            "-is-opened": isMenuOpened,
+          })}
         >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+          {links.map(({ to, text }, index) => {
+            return (
+              <li key={index} className="item">
+                <a href={to}>{text}</a>
+              </li>
+            )
+          })}
+        </ul>
+        <Hamburguer
+          isMenuOpened={isMenuOpened}
+          setIsMenuOpened={setIsMenuOpened}
+        />
+      </div>
+    </header>
+  )
 }
 
 export default Header

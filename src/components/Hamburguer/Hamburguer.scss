@@ -1,0 +1,48 @@
+.menu-button {
+  width: 30px;
+  height: 20px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  z-index: 20;
+}
+.menu-button:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, white 50%, $blue-1 50%);
+  background-size: 100% 35%;
+  background-repeat-x: no-repeat;
+  background-position: 0 10px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.menu-button:after {
+  width: 70%;
+  height: 100%;
+  top: 5%;
+  left: 10%;
+  content: "";
+  position: absolute;
+  background: linear-gradient(to right, transparent 40%, white 40%, white 60%, transparent 60%),
+    linear-gradient(to bottom, transparent 40%, white 40%, white 60%, transparent 60%);
+  transform: rotate(45deg) scale(0);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.menu-button.-is-opened {
+  background: $blue-1;
+}
+.menu-button.-is-opened:before {
+  opacity: 0;
+  transform: scale(0);
+}
+.menu-button.-is-opened:after {
+  transform: rotate(45deg) scale(1);
+  opacity: 1;
+  transition-delay: 0.3s ease;
+}
