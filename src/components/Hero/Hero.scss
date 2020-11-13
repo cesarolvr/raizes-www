@@ -1,0 +1,75 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  
+  .hero-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    filter: blur(10px);
+    transform: scale(1.1);
+
+    @media (min-width: $m) {
+      filter: none;
+      transform: none;
+    }
+    
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $blue-1;
+      opacity: 0.6;
+    }
+  }
+
+  .hero-content {
+    height: 700px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+  }
+
+  .title {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+
+    @media (min-width: $m) {
+      font-size: 3.4rem;
+      max-width: 80%;
+    }
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    font-weight: bold;
+
+    @media (min-width: $m) {
+      font-size: 1rem;
+    }
+  }
+
+  .description {
+    font-size: 1rem;
+    
+    @media (min-width: $m) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .divider {
+    background: $green-1;
+    height: 2px;
+    width: 85px;
+  }
+}

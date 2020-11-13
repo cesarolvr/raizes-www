@@ -3,17 +3,19 @@ import React from "react"
 // Components
 import Layout from "../components/Layout"
 import Header from "../components/Header"
+import Hero from "../components/Hero"
 import Footer from "../components/Footer"
 import SEO from "../components/Seo"
+
+// Assets
+import backgroundPath from '../images/hero-produtor-rural.jpg'
 
 const Home = () => {
   return (
     <Layout>
       <SEO title="Home" />
       <Header />
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
+      <Hero backgroundPath={backgroundPath} />
       <Footer />
     </Layout>
   )
