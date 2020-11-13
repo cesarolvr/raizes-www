@@ -1,0 +1,78 @@
+.numbers-section {
+  padding: 80px 20px;
+  background-color: $gray-2;
+
+  @media (min-width: $m) {
+    padding: 120px 20px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $m) {
+      display: grid;
+      grid-template-columns: 30% 70%;
+    }
+  }
+
+  .divider {
+    margin: 0;
+  }
+
+  .numbers-list {
+    width: 100%;
+    margin: 0;
+    padding-top: 30px;
+
+    @media (min-width: $m) {
+      display: flex;
+      padding-top: 0px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .item {
+      height: 100%;
+      list-style: none;
+      width: 100%;
+      margin: 50px 0;
+      text-align: left;
+
+      @media (min-width: $m) {
+        text-align: center;
+        display: flex;
+        margin: 0;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .value {
+        font-size: 3rem;
+        font-weight: bold;
+        display: inline-block;
+        margin: 0 0 30px;
+        color: $blue-2;
+
+        @media (min-width: $m) {
+          font-size: 4rem;
+        }
+
+        small {
+          font-size: 0.7em;
+        }
+      }
+
+      .subtitle {
+        margin: 0;
+      }
+    }
+  }
+
+  .title {
+    margin-bottom: 40px;
+    line-height: 1.4em;
+  }
+}

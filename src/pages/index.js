@@ -10,6 +10,7 @@ import Quote from "../components/Quote"
 import Related from "../components/Related"
 import Contact from "../components/Contact"
 import WhatWeDo from "../components/WhatWeDo"
+import Numbers from "../components/Numbers"
 
 // Assets
 import backgroundPath from "../images/hero-home.jpg"
@@ -88,6 +89,7 @@ const Home = () => {
           },
         ]}
       />
+      <Numbers />
       <WhatWeDo />
       <Quote />
       <Contact />
