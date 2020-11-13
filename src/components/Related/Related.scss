@@ -73,6 +73,11 @@
         text-decoration: none;
         font-weight: bold;
         color: $blue-2;
+
+        > svg {
+          margin-left: 5px;
+          color: $blue-2;
+        }
       }
     }
   }

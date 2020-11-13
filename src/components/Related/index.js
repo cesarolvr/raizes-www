@@ -1,4 +1,6 @@
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 
 // Styles
 import "./Related.scss"
@@ -44,7 +46,9 @@ const Related = ({
                 <img className="item-thumb" src={image}></img>
                 <p className="item-title">{title}</p>
                 <p className="item-description">{description}</p>
-                <a className="item-link" href={link}>Saiba mais</a>
+                <a className="item-link" href={link}>
+                  Saiba mais <FontAwesomeIcon icon={faExternalLinkAlt} />
+                </a>
               </li>
             )
           })}
