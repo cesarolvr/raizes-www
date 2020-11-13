@@ -3,7 +3,7 @@ import React from "react"
 // Styles
 import "./Hero.scss"
 
-const Hero = ({ backgroundPath = "" }) => {
+const Hero = ({ backgroundPath = "", title, description, subtitle }) => {
   return (
     <section className="hero">
       <div
@@ -12,13 +12,10 @@ const Hero = ({ backgroundPath = "" }) => {
       ></div>
       <div className="container">
         <div className="hero-content">
-          <p className="subtitle">Fundo Raízes</p>
-          <h1 className="title">Experiência, Tecnologia, Inteligência</h1>
+          <p className="subtitle">{subtitle}</p>
+          <h1 className="title">{title}</h1>
           <hr className="divider" />
-          <p className="description">
-            Invista em um fundo sólido com rentabilidade acima da média do
-            mercado
-          </p>
+          <p className="description">{description}</p>
         </div>
       </div>
     </section>

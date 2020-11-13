@@ -3,6 +3,10 @@
   width: 100%;
   overflow: hidden;
 
+  @media (min-width: $m) {
+    padding: 80px 0px;
+  }
+
   .container {
     padding: 0;
 
@@ -31,7 +35,7 @@
     .item {
       flex-shrink: 0;
       margin-right: 30px;
-      box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
       border-radius: 8px;
       overflow: hidden;
       max-width: 320px;
@@ -46,18 +50,19 @@
         width: 100%;
       }
 
-      &-title, &-description, &-link {
+      &-title,
+      &-description,
+      &-link {
         padding: 0 15px;
         @media (min-width: $m) {
           padding: 0 30px;
-        }  
-        
+        }
       }
 
       &-title {
         font-size: 1.1rem;
         font-weight: bold;
-        margin: 10px 0 10px
+        margin: 10px 0 10px;
       }
 
       &-description {

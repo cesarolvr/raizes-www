@@ -25,7 +25,7 @@ const Footer = () => {
               )
             })}
           </ul>
-          <div className="menu-contact">
+          <address className="menu-contact">
             <p className="address">
               Rua Jerônimo da Veiga, 164 Conj. 1B - 1º Andar Jardim Europa, São
               Paulo +55 (11) 3704-0030
@@ -34,7 +34,7 @@ const Footer = () => {
               © {new Date().getFullYear()} Fundo Raízes - Todos os direitos
               reservados
             </p>
-          </div>
+          </address>
         </div>
       </div>
     </footer>

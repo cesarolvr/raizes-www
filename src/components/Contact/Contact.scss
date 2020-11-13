@@ -69,10 +69,12 @@
         text-decoration: underline;
         text-align: center;
         display: inline-block;
-        color: $gray-4;
-        > svg {
-          margin-right: 10px;
-          color: $blue-2;
+        a {
+          color: $gray-4;
+          > svg {
+            margin-right: 10px;
+            color: $blue-2;
+          }
         }
       }
     }

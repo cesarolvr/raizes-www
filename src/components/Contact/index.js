@@ -1,6 +1,10 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faEnvelopeOpen, faPhoneAlt, faMobileAlt} from "@fortawesome/free-solid-svg-icons"
+import {
+  faEnvelopeOpen,
+  faPhoneAlt,
+  faMobileAlt,
+} from "@fortawesome/free-solid-svg-icons"
 
 // Styles
 import "./Contact.scss"
@@ -14,16 +18,22 @@ const Contact = () => {
         <p className="paragraph">Fale com o Raízes</p>
         <ul className="contact-list">
           <li className="item">
-            <FontAwesomeIcon icon={faEnvelopeOpen} />
-            contato@fundoraizes.com.br
+            <a href="mailto: contato@fundoraizes.com.br">
+              <FontAwesomeIcon icon={faEnvelopeOpen} />
+              contato@fundoraizes.com.br
+            </a>
           </li>
           <li className="item">
-            <FontAwesomeIcon icon={faPhoneAlt} />
-            (11)98293-89223
+            <a href="tel: (11)98293-89223">
+              <FontAwesomeIcon icon={faPhoneAlt} />
+              (11)98293-89223
+            </a>
           </li>
           <li className="item">
-            <FontAwesomeIcon icon={faMobileAlt} />
-            (11)98293-89223
+            <a href="tel: (11)98293-89223">
+              <FontAwesomeIcon icon={faMobileAlt} />
+              (11)98293-89223
+            </a>
           </li>
         </ul>
       </div>

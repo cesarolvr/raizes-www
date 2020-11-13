@@ -56,13 +56,14 @@
     }
 
     .menu-contact {
+      font-style: normal;
       margin: 30px 0;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
 
       .address {
-        max-width: 30%;
+        max-width: 40%;
         text-align: right;
       }
     }
