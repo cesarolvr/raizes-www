@@ -1,26 +1,27 @@
 export const links = [
   {
     text: 'Para sua empresa',
-    to: '#'
+    to: '/para-empresas/'
   },
   {
     text: 'Para investidores',
-    to: '#'
+    to: '/para-investidores/'
   },
   {
     text: 'Quem somos',
-    to: '#'
+    to: '/quem-somos/'
   },
   {
     text: 'Contato',
-    to: '#'
+    to: '/contato/'
   },
   {
     text: 'FAQ',
-    to: '#'
+    to: '/faq/'
   },
   {
     text: 'Área do cliente',
-    to: '#'
+    to: 'http://168.0.134.22:8080/netFactor/jsp/nfrInicia.jsp',
+    target: '_blank'
   },
 ]

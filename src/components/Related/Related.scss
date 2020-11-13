@@ -26,6 +26,14 @@
     overflow: scroll;
     width: 100%;
 
+    @media (min-width: $m) {
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 40px;
+      row-gap: 40px;
+    }
+
     &:after {
       content: "";
       -ms-flex: 0 0 20px;
@@ -38,11 +46,14 @@
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
       border-radius: 8px;
       overflow: hidden;
+      width: 100%;
       max-width: 320px;
 
       @media (min-width: $m) {
         max-width: none;
         flex-shrink: 1;
+        max-width: none;
+        margin: 0;
       }
 
       &-thumb {

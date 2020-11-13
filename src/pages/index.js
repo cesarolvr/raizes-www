@@ -11,44 +11,83 @@ import Related from "../components/Related"
 import Contact from "../components/Contact"
 
 // Assets
-import backgroundPath from "../images/hero-produtor-rural.jpg"
+import backgroundPath from "../images/hero-home.jpg"
+import image1 from "../images/thumb-compra-de-recebiveis.jpg"
+import image2 from "../images/thumb-capital-de-giro.jpg"
+import image3 from "../images/thumb-antecipacao-de-contratos.jpg"
+
+// Styles
+import "../styles/pages/Home.scss"
 
 const Home = () => {
   return (
-    <Layout>
+    <Layout className="home">
       <SEO title="Home" />
       <Header />
-      <Hero backgroundPath={backgroundPath} />
+      <Hero
+        backgroundPath={backgroundPath}
+        title="Experiência, Tecnologia, Inteligência"
+        subtitle="Fundo Raízes"
+        description="Invista em um fundo sólido com rentabilidade acima da média do mercado"
+      />
       <article className="article">
         <div className="container">
           <p>
-            A Cédula de Produto Rural (CPR) é um título que representa uma
-            promessa de entrega futura de um produto agropecuário, funcionando
-            como um facilitador na produção e comercialização rural. Adquirimos
-            a CPR e antecipamos os recursos ao produtor ou cooperativa, que se
-            compromete a resgatar financeiramente a cédula no seu vencimento.
-          </p>
-          <p>
-            O Fundo Raízes disponibiliza a produtores rurais, cooperativas,
-            revendas de produtos agropecuários, cerealistas e demais agentes do
-            agronegócio a possibilidade de antecipar a CPR-F, promovendo meios
-            eficientes de suporte às atividades de financiamento da produção,
-            intermediação e comercialização de produtos agropecuários.
-          </p>
-
-          <h4 className="color-blue">Como funciona:</h4>
-          <strong>CPR-F</strong>
-          <p>
-            Para que tenha eficácia perante terceiros, a CPR deverá ser
-            registrada no Cartório de Registro de Imóveis do domicílio do
-            emitente e, caso haja penhor, hipoteca ou alienação fiduciária,
-            deverá ser registrada, também, no Cartório de Registro de Imóveis no
-            qual os bens estão empenhados ou alienados fiduciariamente
+            Raízes é um Fundo de Investimento em Direitos Creditórios
+            especializado na compra de recebíveis provenientes de vendas
+            mercantis de bens e serviços ou contratos de fornecimento nos
+            diversos segmentos da economia e agronegócio.
           </p>
         </div>
       </article>
+      <Related
+        title="Temos a solução de crédito para seu negócio"
+        list={[
+          {
+            image: image1,
+            title: "Antecipação de recebíveis",
+            description:
+              "Modalidade de crédito perfeita para produtores rurais",
+            link: "/antecipacao-de-recebiveis/",
+          },
+          {
+            image: image2,
+            title: "Capital de Giro",
+            description:
+              "Modalidade de crédito perfeita para produtores rurais",
+            link: "/capital-de-giro/",
+          },
+          {
+            image: image3,
+            title: "Cédula de produto rural",
+            description:
+              "Modalidade de crédito perfeita para produtores rurais",
+            link: "/cedula-de-produto-rural/",
+          },
+          {
+            image: image1,
+            title: "Home equity",
+            description:
+              "Modalidade de crédito perfeita para produtores rurais",
+            link: "/home-equity/",
+          },
+          {
+            image: image2,
+            title: "Domicílio bancário",
+            description:
+              "Modalidade de crédito perfeita para produtores rurais",
+            link: "/domicilio-bancario/",
+          },
+          {
+            image: image3,
+            title: "Domicílio bancário",
+            description:
+              "Modalidade de crédito perfeita para produtores rurais",
+            link: "/domicilio-bancario/",
+          },
+        ]}
+      />
       <StepsSection />
-      <Related />
       <Contact />
       <Footer />
     </Layout>

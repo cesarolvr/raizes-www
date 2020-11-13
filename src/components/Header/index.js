@@ -25,10 +25,10 @@ const Header = () => {
             "-is-opened": isMenuOpened,
           })}
         >
-          {links.map(({ to, text }, index) => {
+          {links.map(({ to, text, target }, index) => {
             return (
               <li key={index} className="item">
-                <a href={to}>{text}</a>
+                <a href={to} target={target}>{text}</a>
               </li>
             )
           })}

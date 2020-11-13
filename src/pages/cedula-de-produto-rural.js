@@ -63,7 +63,7 @@ const Home = () => {
             title: "Compra de recebíveis",
             description:
               "Modalidade de crédito perfeita para produtores rurais",
-            link: "/compra-de-recebiveis/",
+            link: "/antecipacao-de-recebiveis/",
           },
           {
             image: image2,

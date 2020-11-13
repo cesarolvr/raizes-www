@@ -12,12 +12,8 @@ import "./Base.scss"
 import "./Helpers.scss"
 import "./Layout.scss"
 
-const Layout = ({ children }) => {
-  return (
-    <>
-      <main>{children}</main>
-    </>
-  )
+const Layout = ({ children, className }) => {
+  return <main className={className}>{children}</main>
 }
 
 export default Layout
