@@ -32,12 +32,16 @@
   }
 
   .hero-content {
-    height: 700px;
+    height: 400px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     color: white;
+
+    @media (min-width: $m) {
+      height: 700px;
+    }
   }
 
   .title {
