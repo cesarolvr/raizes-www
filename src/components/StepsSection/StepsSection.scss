@@ -1,0 +1,95 @@
+.steps-section {
+  padding: 80px 0;
+  background: $gray-2;
+
+  
+
+  .container {
+    padding: 0px 40px;
+    @media (min-width: $m) {
+      padding: 0px 20px;
+    }
+  }
+
+  .title {
+    text-align: left;
+
+    @media (min-width: $m) {
+      text-align: center;
+    }
+  }
+
+  .divider {
+    width: 65px;
+    height: 2px;
+    background-color: $green-1;
+    margin: 0;
+
+    @media (min-width: $m) {
+      margin: auto;
+    }
+  }
+
+  .steps-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 50px 0;
+
+    @media (min-width: $m) {
+      flex-direction: row;
+      padding: 80px 0 50px;
+    }
+
+    .item {
+      position: relative;
+      margin: 30px 0;
+      
+
+      @media (min-width: $m) {
+        margin: 0;
+        padding: 0 40px;
+      }
+
+      &-number {
+        position: absolute;
+        font-size: 16rem;
+        color: $gray-3;
+        z-index: 3;
+        opacity: 0.4;
+        margin: -60px 0 0 -10px;
+        font-weight: bold;
+
+        @media (min-width: $m) {
+          font-size: 15rem;
+        }
+      }
+      &-title {
+        font-size: 1.8rem;
+        z-index: 5;
+        position: relative;
+        margin: 80px 0 25px;
+        font-weight: bold;
+      }
+      &-description {
+        font-size: 1.2rem;
+        z-index: 5;
+        line-height: 1.7rem;
+        position: relative;
+        color: $gray-4;
+      }
+    }
+  }
+
+  .button {
+    margin: 0px auto;
+    width: 100%;
+    padding: 15px;
+
+    @media (min-width: $m) {
+      margin: 30px auto;
+      width: 360px;
+    }
+  }
+}

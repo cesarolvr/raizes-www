@@ -6,6 +6,7 @@ import Header from "../components/Header"
 import Hero from "../components/Hero"
 import Footer from "../components/Footer"
 import SEO from "../components/Seo"
+import StepsSection from "../components/StepsSection"
 
 // Assets
 import backgroundPath from "../images/hero-produtor-rural.jpg"
@@ -44,6 +45,7 @@ const Home = () => {
           </p>
         </div>
       </article>
+      <StepsSection />
       <Footer />
     </Layout>
   )

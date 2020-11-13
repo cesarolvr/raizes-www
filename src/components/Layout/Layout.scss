@@ -15,3 +15,13 @@
     line-height: 1.8;
   }
 }
+
+.section {
+  > .container {
+    .title {
+      font-family: "Playfair Display", serif;
+      font-weight: normal;
+      font-size: 1.8rem;
+    }
+  }
+}
