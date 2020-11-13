@@ -8,6 +8,7 @@ import Footer from "../components/Footer"
 import SEO from "../components/Seo"
 import StepsSection from "../components/StepsSection"
 import Related from "../components/Related"
+import Contact from "../components/Contact"
 
 // Assets
 import backgroundPath from "../images/hero-produtor-rural.jpg"
@@ -48,6 +49,7 @@ const Home = () => {
       </article>
       <StepsSection />
       <Related />
+      <Contact />
       <Footer />
     </Layout>
   )
