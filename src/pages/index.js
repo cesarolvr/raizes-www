@@ -7,6 +7,7 @@ import Hero from "../components/Hero"
 import Footer from "../components/Footer"
 import SEO from "../components/Seo"
 import StepsSection from "../components/StepsSection"
+import Related from "../components/Related"
 
 // Assets
 import backgroundPath from "../images/hero-produtor-rural.jpg"
@@ -46,6 +47,7 @@ const Home = () => {
         </div>
       </article>
       <StepsSection />
+      <Related />
       <Footer />
     </Layout>
   )

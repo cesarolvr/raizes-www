@@ -600,6 +600,12 @@ pre tt:after {
   max-width: 100%;
 }
 
+.divider {
+  width: 65px;
+  height: 2px;
+  background-color: $green-1;
+}
+
 
 @media only screen and (max-width: 480px) {
   html {
