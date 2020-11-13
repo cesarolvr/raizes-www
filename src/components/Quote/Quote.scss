@@ -1,0 +1,46 @@
+.quote-section {
+  padding: 120px 20px;
+  margin-bottom: 100px;
+  position: relative;
+  background-size: cover;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+
+  @media (min-width: $m) {
+    padding: 180px 20px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $blue-1;
+    opacity: 0.6;
+  }
+
+  .container {
+    padding: 0 5%;
+  }
+
+  .phrase {
+    font-size: 2rem;
+    line-height: 1.2em;
+    margin: 0 auto 20px auto;
+    font-family: "Playfair Display", serif;
+    color: white;
+
+    @media (min-width: $m) {
+      font-size: 2.3rem;
+      line-height: 1.2em;
+    }
+  }
+
+  .author {
+    color: white;
+    font-weight: bold;
+    margin: 0;
+  }
+}

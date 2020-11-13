@@ -6,7 +6,7 @@ import Header from "../components/Header"
 import Hero from "../components/Hero"
 import Footer from "../components/Footer"
 import SEO from "../components/Seo"
-import StepsSection from "../components/StepsSection"
+import Quote from "../components/Quote"
 import Related from "../components/Related"
 import Contact from "../components/Contact"
 
@@ -87,7 +87,7 @@ const Home = () => {
           },
         ]}
       />
-      <StepsSection />
+      <Quote />
       <Contact />
       <Footer />
     </Layout>

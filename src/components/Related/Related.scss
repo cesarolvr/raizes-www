@@ -10,12 +10,24 @@
   .container {
     padding: 0;
 
+    @media (min-width: $m) {
+      padding: 0 20px;
+    }
+
     .title {
       padding: 0px 40px;
+
+      @media (min-width: $m) {
+        padding: 0;
+      }
     }
   }
   .divider {
     margin: 40px auto 30px 40px;
+
+    @media (min-width: $m) {
+      margin: 40px auto 50px 0px;
+    }
   }
 
   .related-list {
@@ -27,11 +39,12 @@
     width: 100%;
 
     @media (min-width: $m) {
-      padding: 40px;
+      padding: 0px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 40px;
       row-gap: 40px;
+      overflow: visible;
     }
 
     &:after {
