@@ -1,0 +1,29 @@
+.whatwedo-section {
+  padding: 120px 0px;
+  background-color: $blue-1;
+  color: white;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title {
+    margin-bottom: 30px;
+  }
+
+  .divider {
+    margin-bottom: 40px;
+  }
+
+  .description {
+    width: 420px;
+    max-width: 80%;
+    text-align: center;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+  }
+}

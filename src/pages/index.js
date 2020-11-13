@@ -9,6 +9,7 @@ import SEO from "../components/Seo"
 import Quote from "../components/Quote"
 import Related from "../components/Related"
 import Contact from "../components/Contact"
+import WhatWeDo from "../components/WhatWeDo"
 
 // Assets
 import backgroundPath from "../images/hero-home.jpg"
@@ -87,6 +88,7 @@ const Home = () => {
           },
         ]}
       />
+      <WhatWeDo />
       <Quote />
       <Contact />
       <Footer />
