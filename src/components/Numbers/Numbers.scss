@@ -47,6 +47,11 @@
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        border-right: 1px solid rgba(0,0,0,0.1);
+
+        &:last-of-type {
+          border: none;
+        }
       }
 
       .value {
@@ -57,7 +62,7 @@
         color: $blue-2;
 
         @media (min-width: $m) {
-          font-size: 4rem;
+          font-size: 3.6rem;
         }
 
         small {
