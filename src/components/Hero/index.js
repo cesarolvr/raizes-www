@@ -1,14 +1,28 @@
 import React from "react"
+import classnames from "classnames"
 
 // Styles
 import "./Hero.scss"
 
-const Hero = ({ backgroundPath = "", title, description, subtitle }) => {
+const Hero = ({
+  backgroundPath,
+  backgroundColor,
+  title,
+  description,
+  subtitle,
+}) => {
   return (
-    <section className="hero">
+    <section
+      className={classnames("hero", {
+        "-solid-background": backgroundColor,
+      })}
+    >
       <div
         className="hero-background"
-        style={{ backgroundImage: `url("${backgroundPath}")` }}
+        style={{
+          backgroundImage: backgroundPath ? `url("${backgroundPath}")` : null,
+          background: backgroundColor,
+        }}
       ></div>
       <div className="container">
         <div className="hero-content">
