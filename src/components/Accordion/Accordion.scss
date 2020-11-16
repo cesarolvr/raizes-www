@@ -4,7 +4,7 @@
   .tabs {
     border-radius: 16px;
     overflow: hidden;
-    padding: 50px 70px;
+    padding: 20px 30px;
     background: white;
     margin-top: -50px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
@@ -12,6 +12,7 @@
     @media (min-width: $m) {
       margin-top: -100px;
       box-shadow: none;
+      padding: 50px 70px;
     }
 
     input {
@@ -39,6 +40,8 @@
       &:after {
         content: "\276F";
         width: 1em;
+        position: absolute;
+        right: 0;
         height: 1em;
         color: $blue-2;
         text-align: center;
