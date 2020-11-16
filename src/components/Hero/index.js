@@ -5,12 +5,15 @@ import classnames from "classnames"
 import "./Hero.scss"
 
 const Hero = ({
-  backgroundPath,
-  backgroundColor,
+  backgroundPath = "",
+  backgroundColor = "",
   title,
   description,
   subtitle,
 }) => {
+  const backgroundContent = {
+    background: backgroundColor ? backgroundColor : `url("${backgroundPath}")`,
+  }
   return (
     <section
       className={classnames("hero", {
@@ -20,8 +23,7 @@ const Hero = ({
       <div
         className="hero-background"
         style={{
-          backgroundImage: backgroundPath ? `url("${backgroundPath}")` : null,
-          background: backgroundColor,
+          ...backgroundContent,
         }}
       ></div>
       <div className="container">
