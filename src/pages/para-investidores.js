@@ -9,9 +9,10 @@ import SEO from "../components/Seo"
 import Contact from "../components/Contact"
 import StepsSection from "../components/StepsSection"
 import Rating from "../components/Rating"
+import Quotas from "../components/Quotas"
 
 // Assets
-import backgroundPath from "../images/hero-produtor-rural.jpg"
+import backgroundPath from "../images/hero-investidores.jpg"
 
 // Styles
 import "../styles/pages/Investors.scss"
@@ -68,6 +69,7 @@ const Investors = () => {
           </p>
         </div>
       </article>
+      <Quotas />
       <article className="article">
         <div className="container">
           <h3>Garantias</h3>
@@ -96,7 +98,7 @@ const Investors = () => {
         </div>
       </article>
       <Rating />
-      <StepsSection />
+      <StepsSection title="Como investir" />
       <Contact />
       <Footer />
     </Layout>
