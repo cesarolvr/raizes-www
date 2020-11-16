@@ -10,6 +10,7 @@ import Contact from "../components/Contact"
 import StepsSection from "../components/StepsSection"
 import Rating from "../components/Rating"
 import Quotas from "../components/Quotas"
+import Partners from "../components/Partners"
 
 // Assets
 import backgroundPath from "../images/hero-investidores.jpg"
@@ -98,6 +99,7 @@ const Investors = () => {
         </div>
       </article>
       <Rating />
+      <Partners />
       <StepsSection title="Como investir" />
       <Contact />
       <Footer />
