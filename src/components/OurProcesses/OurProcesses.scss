@@ -1,0 +1,72 @@
+.ourprocesses-section {
+  padding: 80px 20px;
+
+  @media (min-width: $m) {
+    padding: 160px 20px;
+  }
+
+  > .container {
+    @media (min-width: $m) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .holder {
+      &:first-of-type {
+        width: 40%;
+      }
+      &:last-of-type {
+        width: 100%;
+
+        @media (min-width: $m) {
+          width: 60%;
+        }
+      }
+    }
+
+    .title {
+      margin-bottom: 40px;
+    }
+
+    .divider {
+      margin-bottom: 80px;
+      @media (min-width: $m) {
+        margin-bottom: 0px;
+      }
+    }
+
+    .processes-list {
+      .item {
+        padding: 0 20px 60px 30px;
+        margin: 0;
+        border-left: 1px solid $blue-2;
+        position: relative;
+
+        @media (min-width: $m) {
+          padding: 0 20px 60px 80px;
+        }
+
+        .item-title {
+          color: $blue-2;
+          transform: translateY(-7px);
+          margin-bottom: 10px;
+        }
+
+        &:last-of-type {
+          border-left-color: transparent;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: -7px;
+          top: 0px;
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+          background-color: $blue-2;
+        }
+      }
+    }
+  }
+}

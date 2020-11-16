@@ -12,6 +12,7 @@ import Contact from "../components/Contact"
 import WhatWeDo from "../components/WhatWeDo"
 import Numbers from "../components/Numbers"
 import BeAInvestor from "../components/BeAInvestor"
+import OurProcesses from "../components/OurProcesses"
 
 // Assets
 import backgroundPath from "../images/hero-home.jpg"
@@ -93,6 +94,7 @@ const Home = () => {
       <Numbers />
       <BeAInvestor />
       <WhatWeDo />
+      <OurProcesses />
       <Quote />
       <Contact />
       <Footer />
