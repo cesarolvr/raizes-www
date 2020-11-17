@@ -16,7 +16,7 @@ import image1 from "../images/thumb-compra-de-recebiveis.jpg"
 import image2 from "../images/thumb-capital-de-giro.jpg"
 import image3 from "../images/thumb-antecipacao-de-contratos.jpg"
 
-const Home = () => {
+export default () => {
   return (
     <Layout>
       <SEO title="Home" />
@@ -74,10 +74,10 @@ const Home = () => {
           },
           {
             image: image3,
-            title: "Antecipação de contratos",
+            title: "Antecipação de recebíveis",
             description:
               "Modalidade de crédito perfeita para produtores rurais",
-            link: "/antecipacao-de-contratos/",
+            link: "/antecipacao-de-recebiveis/",
           },
         ]}
       />
@@ -86,5 +86,3 @@ const Home = () => {
     </Layout>
   )
 }
-
-export default Home
