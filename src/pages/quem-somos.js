@@ -9,6 +9,7 @@ import SEO from "../components/Seo"
 import Contact from "../components/Contact"
 import Numbers from "../components/Numbers"
 import OurPillars from "../components/OurPillars"
+import OurTrajectory from "../components/OurTrajectory"
 
 // Assets
 import backgroundPath from "../images/hero-quem-somos.jpg"
@@ -47,6 +48,7 @@ const Investors = () => {
       </article>
       <OurPillars />
       <Numbers />
+      <OurTrajectory />
       <Contact />
       <Footer />
     </Layout>

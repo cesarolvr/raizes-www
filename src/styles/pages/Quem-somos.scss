@@ -1,6 +1,10 @@
 .quem-somos {
   .numbers-section {
     background: none;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
+
+    @media (min-width: $m) {
+      margin-bottom: 60px;
+    }
   }
 }
