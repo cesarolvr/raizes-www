@@ -41,7 +41,7 @@ const Partners = ({
         <ol className="partners-list">
           {list.map((item, index) => {
             return (
-              <div className="item">
+              <div className="item" key={index}>
                 <img src={item} key={index} />
               </div>
             )

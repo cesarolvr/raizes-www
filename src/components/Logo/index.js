@@ -8,7 +8,7 @@ import logo from "../../images/logo.svg"
 import './Logo.scss'
 
 const Logo = () => (
-  <Link to="/">
+  <Link to="/" className="logo-wrapper">
     <img src={logo} className="logo" />
   </Link>
 )

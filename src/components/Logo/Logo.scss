@@ -3,4 +3,10 @@
   width: 93px;
   position: relative;
   z-index: 40;
+  display: block;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
 }
