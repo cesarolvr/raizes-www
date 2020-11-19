@@ -1,6 +1,9 @@
 .contact-form-section {
   width: 100%;
-  overflow: hidden;
+
+  > .container {
+    padding: 0;
+  }
 
   .content {
     width: 100%;
@@ -51,7 +54,6 @@
   }
 
   .container {
-    overflow: visible;
     @media (min-width: $m) {
       display: flex;
     }
@@ -60,10 +62,10 @@
       width: 100%;
       text-align: center;
       position: relative;
-      padding: 50px 0px 40px 0px;
+      padding: 50px 40px 40px;
 
       @media (min-width: $m) {
-        padding: 100px 0px;
+        padding: 100px 40px;
       }
 
       @media (min-width: $m) {
