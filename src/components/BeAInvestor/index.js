@@ -23,7 +23,7 @@ const BeAInvestor = () => {
             Manhattan, Banco Fator, Private Banking do HSBC, especializou-se no
             Mercado Brasileiro de Hedge Funds e Alocação de Ativos.
           </p>
-          <button className="button">Saiba mais</button>
+          <button className="button"><a href="/para-investidores/">Saiba mais</a></button>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 export const links = [
   {
     text: 'Para sua empresa',
-    to: '/para-empresas/'
+    to: '/#para-sua-empresa'
   },
   {
     text: 'Para investidores',

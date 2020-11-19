@@ -45,6 +45,7 @@ const Home = () => {
         </div>
       </article>
       <Related
+        id="para-sua-empresa"
         title="Temos a solução de crédito para seu negócio"
         list={[
           {

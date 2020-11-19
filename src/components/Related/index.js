@@ -5,9 +5,9 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 // Styles
 import "./Related.scss"
 
-const Related = ({ title = "Conheça também", list = [] }) => {
+const Related = ({ title = "Conheça também", list = [], id }) => {
   return (
-    <section className="section related-section">
+    <section className="section related-section" id={id}>
       <div className="container">
         <h2 className="title">{title}</h2>
 

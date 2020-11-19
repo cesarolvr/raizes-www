@@ -600,6 +600,11 @@ pre tt:after {
   padding: 13px 39px;
   font-weight: 700;
   max-width: 100%;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .divider {

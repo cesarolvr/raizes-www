@@ -51,6 +51,7 @@
   }
 
   .container {
+    overflow: visible;
     @media (min-width: $m) {
       display: flex;
     }
