@@ -57,6 +57,10 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
+a[href^="tel"] {
+  color: inherit; /* Inherit text color of parent element. */
+  text-decoration: none; /* Remove underline. */
+}
 a:active,
 a:hover {
   outline-width: 0;
@@ -680,7 +684,8 @@ pre tt:after {
     height: 150px;
     line-height: 1.4rem;
 
-    &:focus {
+    &:focus,
+    &:valid {
       padding: 45px 15px 0px;
     }
   }

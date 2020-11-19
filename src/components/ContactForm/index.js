@@ -112,7 +112,7 @@ const ContactForm = () => {
                     isRequired={true}
                   />
                   <Input
-                    type="number"
+                    type="tel"
                     name="phone"
                     handleChange={handleChange}
                     handleBlur={handleBlur}
