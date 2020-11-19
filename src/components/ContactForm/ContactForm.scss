@@ -1,0 +1,35 @@
+.contact-form-section {
+  .content {
+    .title {
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      font-weight: normal;
+
+      @media (min-width: $m) {
+        font-size: 3.4rem;
+        max-width: 80%;
+      }
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      font-weight: bold;
+
+      @media (min-width: $m) {
+        font-size: 1rem;
+      }
+    }
+
+    .description {
+      font-size: 1rem;
+
+      @media (min-width: $m) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  
+  .container {
+    display: flex;
+  }
+}

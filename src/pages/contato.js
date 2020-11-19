@@ -4,6 +4,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import ContactForm from "../components/ContactForm"
 import SEO from "../components/Seo"
 
 // Styles
@@ -14,6 +15,7 @@ export default () => {
     <Layout className="home">
       <SEO title="Contato" />
       <Header />
+      <ContactForm />
       <Footer />
     </Layout>
   )
