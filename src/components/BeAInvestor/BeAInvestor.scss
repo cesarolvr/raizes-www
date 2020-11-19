@@ -22,6 +22,8 @@
       &:nth-child(1) {
         display: flex;
         justify-content: flex-end;
+        flex-direction: row;
+        align-items: flex-start;
       }
 
       &:nth-child(2) {
