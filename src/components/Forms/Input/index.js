@@ -1,4 +1,5 @@
 import React from "react"
+import classnames from "classnames"
 
 // Styles
 import "./Input.scss"
@@ -9,20 +10,33 @@ export default ({
   value,
   error,
   touched,
+  label,
+  isRequired,
   handleChange = f => f,
   handleBlur = f => f,
 }) => {
-  console.log(error)
   return (
-    <div className="input-wrapper">
-      <input
-        type={type}
-        name={name}
-        onChange={handleChange}
-        onBlur={handleBlur}
-        value={value}
-      />
-      {touched && error ? <span className="error">{error}</span> : null}
+    <div className="field-wrapper">
+      <div
+        className={classnames("input-wrapper", {
+          "-touched": touched[name],
+          "-filled": value,
+        })}
+      >
+        <input
+          type={type}
+          id={`input-${name}`}
+          name={name}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={value}
+          required={isRequired}
+        />
+        <label htmlFor={`input-${name}`}>{label}</label>
+      </div>
+      <div className="error-wrapper">
+        {touched[name] && error ? <span className="error">{error}</span> : null}
+      </div>
     </div>
   )
 }

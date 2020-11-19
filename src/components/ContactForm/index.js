@@ -17,15 +17,17 @@ import "./ContactForm.scss"
 const ContactForm = () => {
   const validate = values => {
     const errors = {}
-    if (!values.email) {
-      errors.email = "Required"
+    if (!values.name) {
+      errors.name = "Campo de nome obrigatório"
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-      errors.email = "Invalid email address"
+      errors.email = "Email inválido"
+    } else if (!values.phone) {
+      errors.phone = "Campo de telefone obrigatório"
     }
     return errors
   }
   const [initialValues, setInitialValues] = useState({
-    nome: "",
+    name: "",
     email: "",
     phone: "",
     message: "",
@@ -68,6 +70,7 @@ const ContactForm = () => {
         </div>
         <div className="holder">
           <Formik
+            
             initialValues={initialValues}
             validate={validate}
             onSubmit={(values, props) => {
@@ -82,57 +85,63 @@ const ContactForm = () => {
               handleBlur,
               handleSubmit,
               isSubmitting,
-            }) => (
-              <form onSubmit={handleSubmit}>
-                <Input
-                  type="text"
-                  name="name"
-                  handleChange={handleChange}
-                  handleBlur={handleBlur}
-                  touched={touched}
-                  value={values.name}
-                  error={errors.name}
-                  placeholder="Nome"
-                />
-                <Input
-                  type="email"
-                  name="email"
-                  handleChange={handleChange}
-                  handleBlur={handleBlur}
-                  value={values.email}
-                  touched={touched}
-                  error={errors.email}
-                  placeholder="Email"
-                />
-                <Input
-                  type="number"
-                  name="phone"
-                  handleChange={handleChange}
-                  handleBlur={handleBlur}
-                  value={values.number}
-                  touched={touched}
-                  error={errors.number}
-                  placeholder="Celular"
-                />
-                <Textarea
-                  type="text"
-                  name="message"
-                  handleChange={handleChange}
-                  handleBlur={handleBlur}
-                  value={values.message}
-                  touched={touched}
-                  error={errors.message}
-                  placeholder="Mensagem"
-                />
-                <button
-                  className="button"
-                  type="submit"
-                  disabled={isSubmitting}
-                >
-                  Avançar
-                </button>
-              </form>
-            )}
+            }) => {
+              console.log(errors)
+              return (
+                <form className="form" onSubmit={handleSubmit}>
+                  <Input
+                    type="text"
+                    name="name"
+                    handleChange={handleChange}
+                    handleBlur={handleBlur}
+                    touched={touched}
+                    value={values.name}
+                    error={errors.name}
+                    label="Nome"
+                    isRequired={true}
+                  />
+                  <Input
+                    type="email"
+                    name="email"
+                    handleChange={handleChange}
+                    handleBlur={handleBlur}
+                    value={values.email}
+                    touched={touched}
+                    error={errors.email}
+                    label="Email"
+                    isRequired={true}
+                  />
+                  <Input
+                    type="number"
+                    name="phone"
+                    handleChange={handleChange}
+                    handleBlur={handleBlur}
+                    value={values.number}
+                    touched={touched}
+                    error={errors.phone}
+                    label="Celular"
+                    isRequired={true}
+                  />
+                  <Textarea
+                    type="text"
+                    name="message"
+                    handleChange={handleChange}
+                    handleBlur={handleBlur}
+                    value={values.message}
+                    touched={touched}
+                    error={errors.message}
+                    label="Sua dúvida"
+                  />
+                  <button
+                    className="button"
+                    type="submit"
+                    disabled={isSubmitting}
+                  >
+                    Avançar
+                  </button>
+                </form>
+              )
+            }}
           </Formik>
         </div>
       </div>

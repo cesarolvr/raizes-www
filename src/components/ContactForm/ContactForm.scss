@@ -3,6 +3,7 @@
 
   > .container {
     padding: 0;
+    min-height: 70vh;
   }
 
   .content {
@@ -60,6 +61,8 @@
 
     > .holder {
       width: 100%;
+      display: flex;
+      align-items: center;
       text-align: center;
       position: relative;
       padding: 50px 40px 40px;
@@ -72,6 +75,15 @@
         width: 50%;
         text-align: left;
         padding-right: 80px;
+      }
+
+      .form {
+        width: 100%;
+        margin: 0 auto;
+        @media (min-width: $m) {
+          margin: 0;
+          width: 80%;
+        }
       }
 
       &:nth-of-type(1) {
@@ -88,7 +100,7 @@
 
           @media (min-width: $m) {
             width: 50vw;
-            right: 100px;
+            right: 50px;
             left: auto;
           }
         }
