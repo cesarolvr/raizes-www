@@ -16,9 +16,12 @@ import OurProcesses from "../components/OurProcesses"
 
 // Assets
 import backgroundPath from "../images/hero-home.jpg"
-import image1 from "../images/thumb-compra-de-recebiveis.jpg"
+import image1 from "../images/thumb-antecipacao-de-recebiveis.jpg"
 import image2 from "../images/thumb-capital-de-giro.jpg"
-import image3 from "../images/thumb-antecipacao-de-contratos.jpg"
+import image3 from "../images/thumb-cedula-de-produtor-rural.jpg"
+import image4 from "../images/thumb-home-equity.jpg"
+import image5 from "../images/thumb-domicilio-bancario.jpg"
+import image6 from "../images/thumb-cedula-de-produtor-rural.jpg"
 
 // Styles
 import "../styles/pages/Home.scss"
@@ -70,25 +73,25 @@ const Home = () => {
             link: "/cedula-de-produto-rural/",
           },
           {
-            image: image1,
+            image: image4,
             title: "Home equity",
             description:
               "Modalidade de crédito perfeita para produtores rurais",
             link: "/home-equity/",
           },
           {
-            image: image2,
+            image: image5,
             title: "Domicílio bancário",
             description:
               "Modalidade de crédito perfeita para produtores rurais",
             link: "/domicilio-bancario/",
           },
           {
-            image: image3,
-            title: "Domicílio bancário",
+            image: image6,
+            title: "Antecipação de contratos",
             description:
               "Modalidade de crédito perfeita para produtores rurais",
-            link: "/domicilio-bancario/",
+            link: "/antecipacao-de-contratos/",
           },
         ]}
       />

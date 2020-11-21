@@ -12,7 +12,7 @@ import Contact from "../components/Contact"
 
 // Assets
 import backgroundPath from "../images/hero-capital-de-giro.jpg"
-import image1 from "../images/thumb-compra-de-recebiveis.jpg"
+import image1 from "../images/thumb-cedula-de-produtor-rural.jpg"
 import image2 from "../images/thumb-capital-de-giro.jpg"
 import image3 from "../images/thumb-antecipacao-de-contratos.jpg"
 
