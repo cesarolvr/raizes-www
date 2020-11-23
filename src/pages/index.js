@@ -35,7 +35,7 @@ const Home = () => {
         backgroundPath={backgroundPath}
         title="Experiência, Tecnologia, Inteligência"
         subtitle="Fundo Raízes"
-        description="Invista em um fundo sólido com rentabilidade acima da média do mercado"
+        description="Soluções de crédito para pequenas e médias empresas"
       />
       <article className="article">
         <div className="container">
@@ -50,6 +50,7 @@ const Home = () => {
       <Related
         id="para-sua-empresa"
         title="Temos a solução de crédito para seu negócio"
+        description=" Oferecemos  soluções que viabilizam o capital de giro e demais necessidades financeiras para sua empresa."
         list={[
           {
             image: image1,

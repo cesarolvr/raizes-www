@@ -5,13 +5,14 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 // Styles
 import "./Related.scss"
 
-const Related = ({ title = "Conheça também", list = [], id }) => {
+const Related = ({ title = "Conheça também", list = [], id, description }) => {
   return (
     <section className="section related-section" id={id}>
       <div className="container">
         <h2 className="title">{title}</h2>
 
         <hr className="divider" />
+        <p className="description">{description}</p>
         <ul className="related-list">
           {list.map(({ image, title, description, link }, index) => {
             return (
