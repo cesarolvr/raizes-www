@@ -1,7 +1,11 @@
 import React, { useState } from "react"
 import { Formik } from "formik"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import classnames from "classnames"
 import {
+  faTimes,
+  faCheck,
+  faSpinner,
   faEnvelopeOpen,
   faPhoneAlt,
   faMobileAlt,
@@ -10,6 +14,9 @@ import {
 // Components
 import Input from "../Forms/Input"
 import Textarea from "../Forms/Textarea"
+
+// Mock
+import { endpoints } from "../../mock"
 
 // Style
 import "./ContactForm.scss"
@@ -26,6 +33,7 @@ const ContactForm = () => {
     }
     return errors
   }
+
   const [initialValues, setInitialValues] = useState({
     name: "",
     email: "",
@@ -33,8 +41,36 @@ const ContactForm = () => {
     message: "",
   })
 
+  const statusDictionary = {
+    success: () => (
+      <>
+        Enviado com sucesso
+        <FontAwesomeIcon icon={faCheck} />
+      </>
+    ),
+    pending: () => (
+      <>
+        Carregando...
+        <FontAwesomeIcon icon={faSpinner} />
+      </>
+    ),
+    error: () => (
+      <>
+        Falha ao enviar o formulário
+        <FontAwesomeIcon icon={faTimes} />
+      </>
+    ),
+  }
+
+  const [isLoading, setIsloading] = useState(false)
+  const [status, setStatus] = useState("")
+
   return (
-    <section className="contact-form-section">
+    <section
+      className={classnames("contact-form-section", {
+        "-loading": isLoading,
+      })}
+    >
       <div className="container">
         <div className="holder">
           <div className="content">
@@ -70,11 +106,32 @@ const ContactForm = () => {
         </div>
         <div className="holder">
           <Formik
-            
             initialValues={initialValues}
             validate={validate}
-            onSubmit={(values, props) => {
-              console.log(values, props)
+            onSubmit={(values, { resetForm }) => {
+              setIsloading(true)
+              setStatus("pending")
+              var myHeaders = new Headers()
+              myHeaders.append("Content-Type", "application/json")
+              var raw = JSON.stringify({ data: values })
+              fetch(endpoints.contactForm.dev, {
+                method: "POST",
+                headers: myHeaders,
+                body: raw,
+                redirect: "follow",
+              })
+                .then(({ status }) => {
+                  if (status === 200) {
+                    setStatus("success")
+                    resetForm({})
+                  } else {
+                    setStatus("error")
+                  }
+                })
+                .catch(err => {
+                  console.log(err)
+                  setStatus("error")
+                })
             }}
           >
             {({
@@ -86,7 +143,6 @@ const ContactForm = () => {
               handleSubmit,
               isSubmitting,
             }) => {
-              console.log(errors)
               return (
                 <form className="form" onSubmit={handleSubmit}>
                   <Input
@@ -116,7 +172,7 @@ const ContactForm = () => {
                     name="phone"
                     handleChange={handleChange}
                     handleBlur={handleBlur}
-                    value={values.number}
+                    value={values.phone}
                     touched={touched}
                     error={errors.phone}
                     label="Celular"
@@ -143,6 +199,15 @@ const ContactForm = () => {
               )
             }}
           </Formik>
+          {status && (
+            <div
+              className={classnames("form-state", {
+                [`-${status}`]: status,
+              })}
+            >
+              {statusDictionary[status]()}
+            </div>
+          )}
         </div>
       </div>
     </section>
