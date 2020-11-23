@@ -1,3 +1,4 @@
+import { endpoints } from "gatsby-env-variables"
 import React, { useState } from "react"
 import { Formik } from "formik"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -15,13 +16,11 @@ import {
 import Input from "../Forms/Input"
 import Textarea from "../Forms/Textarea"
 
-// Mock
-import { endpoints } from "../../mock"
-
 // Style
 import "./ContactForm.scss"
 
 const ContactForm = () => {
+  console.log(endpoints)
   const validate = values => {
     const errors = {}
     if (!values.name) {
@@ -109,12 +108,13 @@ const ContactForm = () => {
             initialValues={initialValues}
             validate={validate}
             onSubmit={(values, { resetForm }) => {
+              
               setIsloading(true)
               setStatus("pending")
               var myHeaders = new Headers()
               myHeaders.append("Content-Type", "application/json")
               var raw = JSON.stringify({ data: values })
-              fetch(endpoints.contactForm.dev, {
+              fetch(endpoints.contactForm, {
                 method: "POST",
                 headers: myHeaders,
                 body: raw,

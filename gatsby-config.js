@@ -22,6 +22,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-fontawesome-css`,
+    `gatsby-env-variables`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
