@@ -3,7 +3,7 @@
     <mj-section background-color="#0a132c">
       <mj-column>
 
-        <mj-image width="100px" src="https://firebasestorage.googleapis.com/v0/b/raizes-b6208.appspot.com/o/logo.svg?alt=media"></mj-image>
+        <mj-image width="100px" src="https://raizes-b6208.web.app/static/logo-015e67202ce6174234841fd8052457ec.svg"></mj-image>
 
         <mj-divider border-color="#00ba82"></mj-divider>
         <mj-text padding-top="25px" padding-bottom="20px" font-size="20px" color="white" font-family="helvetica" align="center">Novo contato do site</mj-text>
@@ -40,7 +40,7 @@
     <mj-section background-color="#0a132c">
       <mj-column>
 
-        <mj-image width="100px" src="https://firebasestorage.googleapis.com/v0/b/raizes-b6208.appspot.com/o/logo.svg?alt=media"></mj-image>
+        <mj-image width="100px" src="https://raizes-b6208.web.app/static/logo-015e67202ce6174234841fd8052457ec.svg"></mj-image>
 
 
       </mj-column>
