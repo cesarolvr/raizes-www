@@ -8,15 +8,33 @@
   top: 0;
   z-index: 60;
 
-  .logo {
+  @media (min-width: $m) {
+    padding: 15px;
+  }
 
+  &.-shrunken {
+    padding-left: 0;
+    .logo-wrapper {
+      margin-left: 13vw;
+
+      img {
+        margin: 0;
+      }
+    }
+  }
+
+  .logo {
     @media (min-width: $m) {
       margin-left: 15px;
     }
   }
 
-  @media (min-width: $m) {
-    padding: 15px;
+  .holder {
+    width: 30%;
+
+    &:last-of-type {
+      width: 70%;
+    }
   }
 }
 
@@ -47,6 +65,7 @@
     pointer-events: auto;
     opacity: 1;
     z-index: 1;
+    justify-content: flex-end;
   }
 
   &.-is-opened {

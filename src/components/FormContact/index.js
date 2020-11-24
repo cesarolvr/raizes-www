@@ -17,10 +17,9 @@ import Input from "../Forms/Input"
 import Textarea from "../Forms/Textarea"
 
 // Style
-import "./ContactForm.scss"
+import "./FormContact.scss"
 
-const ContactForm = () => {
-  console.log(endpoints)
+const FormContact = () => {
   const validate = values => {
     const errors = {}
     if (!values.name) {
@@ -114,7 +113,7 @@ const ContactForm = () => {
               var myHeaders = new Headers()
               myHeaders.append("Content-Type", "application/json")
               var raw = JSON.stringify({ data: values })
-              fetch(endpoints.contactForm, {
+              fetch(endpoints.formContact, {
                 method: "POST",
                 headers: myHeaders,
                 body: raw,
@@ -214,4 +213,4 @@ const ContactForm = () => {
   )
 }
 
-export default ContactForm
+export default FormContact

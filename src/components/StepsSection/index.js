@@ -44,7 +44,7 @@ const StepsSection = ({
           })}
         </ol>
         <button className="button">
-          Contratar
+          <a href="/contratar/">Contratar</a>
         </button>
       </div>
     </section>

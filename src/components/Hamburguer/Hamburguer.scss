@@ -4,8 +4,11 @@
   flex-direction: column;
   cursor: pointer;
   margin-right: 8px;
+  margin-left: auto;
   position: relative;
   z-index: 10;
+  width: 25px;
+  height: 25px;
 
   @media (min-width: $m) {
     display: none;

@@ -11,11 +11,11 @@ import Hamburguer from "../Hamburguer"
 // Style
 import "./Header.scss"
 
-const Header = () => {
+const Header = ({ className }) => {
   const [isMenuOpened, setIsMenuOpened] = useState(false)
 
   return (
-    <header className="header">
+    <header className={`header ${className}`}>
       <div className="holder">
         <Logo />
       </div>
@@ -28,7 +28,9 @@ const Header = () => {
           {links.map(({ to, text, target }, index) => {
             return (
               <li key={index} className="item">
-                <a href={to} target={target}>{text}</a>
+                <a href={to} target={target}>
+                  {text}
+                </a>
               </li>
             )
           })}
