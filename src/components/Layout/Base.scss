@@ -604,6 +604,17 @@ pre tt:after {
   padding: 13px 39px;
   font-weight: 700;
   max-width: 100%;
+  transition: background-color .3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: $blue-2-dark;
+  }
+
+  &:disabled {
+    background: $gray-3;
+    color: $gray-5;
+  }
 
   a {
     color: white;
@@ -649,9 +660,6 @@ pre tt:after {
     }
 
     &.-filled {
-      label {
-        color: #d3d3d3;
-      }
       input:invalid {
         & ~ label {
           opacity: 0;

@@ -17,7 +17,7 @@ const Related = ({ title = "Conheça também", list = [], id, description }) => 
           {list.map(({ image, title, description, link }, index) => {
             return (
               <li className="item" key={index}>
-                <img className="item-thumb" src={image}></img>
+                <img className="item-thumb" src={image} alt={`Outro produto que o Fundo Raízes oferece: ${title}`} />
                 <p className="item-title">{title}</p>
                 <p className="item-description">{description}</p>
                 <a className="item-link" href={link}>

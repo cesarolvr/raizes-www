@@ -1,29 +1,16 @@
-import { endpoints } from "gatsby-env-variables"
 import React, { useState } from "react"
 import { Formik } from "formik"
 
 // Components
-import Input from "../Forms/Input"
 import Aside from "../Aside"
+import Steps from "./Steps"
+
 
 // Style
 import "./FormClient.scss"
 
 const FormContact = () => {
-  const validate = values => {
-    const errors = {}
-    if (!values.name) {
-      errors.name = "Campo de nome obrigatório"
-    }
-    return errors
-  }
-
-  const [initialValues, setInitialValues] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  })
+  const [step, setStep] = useState(0)
 
   return (
     <section className="product-page hire">
@@ -37,41 +24,40 @@ const FormContact = () => {
         </div>
         <div className="holder">
           <Formik
-            initialValues={initialValues}
-            validate={validate}
+            initialValues={{
+              type: "",
+              quantity: "",
+              name: "",
+              companyEmail: "",
+              cnpj: "",
+              companyName: "",
+              phone: "",
+            }}
+            validate={(values) => {
+              const errors = {}
+              if(!values.quantity) {
+                errors.quantity = "Valor obrigatório"
+              }
+              return errors
+            }}
             onSubmit={(values, props) => {
               console.log("Enviou", values, props)
             }}
           >
-            {({
-              values,
-              errors,
-              touched,
-              handleChange,
-              handleBlur,
-              handleSubmit,
-              isSubmitting,
-            }) => {
+            {({ handleSubmit, setFieldValue, ...props }) => {
+              const setType = (type, value) => {
+                setFieldValue(type, value, false)
+                setStep(step + 1)
+              }
+
+              const nextStep = () => {
+                setStep(step + 1)
+              }
+              
+              console.log(props)
               return (
                 <form className="form form-client" onSubmit={handleSubmit}>
-                  <Input
-                    type="text"
-                    name="name"
-                    handleChange={handleChange}
-                    handleBlur={handleBlur}
-                    touched={touched}
-                    value={values.name}
-                    error={errors.name}
-                    label="Nome"
-                    isRequired={true}
-                  />
-                  <button
-                    className="button"
-                    type="submit"
-                    disabled={isSubmitting}
-                  >
-                    Avançar
-                  </button>
+                  {Steps[step]({ setType, nextStep, ...props })}
                 </form>
               )
             }}

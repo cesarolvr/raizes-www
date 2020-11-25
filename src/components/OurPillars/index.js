@@ -16,7 +16,7 @@ const OurPillars = () => {
         <hr className="divider" />
         <ol className="pillars-list">
           <li className="item">
-            <img className="icon" src={pillar1} />
+            <img className="icon" src={pillar1} alt="" />
             <p className="title">Segurança</p>
             <h5 className="description">
               Trabalhamos com processos rigorosos de análise e uma sólida
@@ -24,7 +24,7 @@ const OurPillars = () => {
             </h5>
           </li>
           <li className="item">
-            <img className="icon" src={pillar2} />
+            <img className="icon" src={pillar2} alt=""  />
             <p className="title">Inteligência</p>
             <h5 className="description">
               Contamos com um time de profissionais qualificados e experientes
@@ -32,7 +32,7 @@ const OurPillars = () => {
             </h5>
           </li>
           <li className="item">
-            <img className="icon" src={pillar3} />
+            <img className="icon" src={pillar3} alt=""  />
             <p className="title">Tecnologia</p>
             <h5 className="description">
               Nosso processo garante soluções customizadas, rápidas e eficazes

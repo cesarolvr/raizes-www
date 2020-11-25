@@ -9,7 +9,7 @@ import './Logo.scss'
 
 const Logo = () => (
   <Link to="/" className="logo-wrapper">
-    <img src={logo} className="logo" />
+    <img src={logo} className="logo" alt="Logo Fundo Raízes" />
   </Link>
 )
 

@@ -32,13 +32,6 @@ const FormContact = () => {
     return errors
   }
 
-  const [initialValues, setInitialValues] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  })
-
   const statusDictionary = {
     success: () => (
       <>
@@ -104,10 +97,14 @@ const FormContact = () => {
         </div>
         <div className="holder">
           <Formik
-            initialValues={initialValues}
+            initialValues={{
+              name: "",
+              email: "",
+              phone: "",
+              message: "",
+            }}
             validate={validate}
             onSubmit={(values, { resetForm }) => {
-              
               setIsloading(true)
               setStatus("pending")
               var myHeaders = new Headers()

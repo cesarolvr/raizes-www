@@ -42,7 +42,7 @@ const Partners = ({
           {list.map((item, index) => {
             return (
               <div className="item" key={index}>
-                <img src={item} key={index} />
+                <img src={item} key={index} alt="" />
               </div>
             )
           })}
