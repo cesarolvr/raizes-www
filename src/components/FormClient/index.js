@@ -5,7 +5,6 @@ import { Formik } from "formik"
 import Aside from "../Aside"
 import Steps from "./Steps"
 
-
 // Style
 import "./FormClient.scss"
 
@@ -28,15 +27,25 @@ const FormContact = () => {
               type: "",
               quantity: "",
               name: "",
-              companyEmail: "",
+              email: "",
               cnpj: "",
               companyName: "",
               phone: "",
             }}
-            validate={(values) => {
+            validate={values => {
               const errors = {}
-              if(!values.quantity) {
-                errors.quantity = "Valor obrigatório"
+              if (step === 1) {
+                if (!values.quantity) {
+                  errors.quantity = "Valor obrigatório"
+                }
+              } else if (step === 2) {
+                if (!values.name) {
+                  errors.name = "Campo de nome obrigatório"
+                } else if (
+                  !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                ) {
+                  errors.email = "Email inválido"
+                }
               }
               return errors
             }}
@@ -53,8 +62,6 @@ const FormContact = () => {
               const nextStep = () => {
                 setStep(step + 1)
               }
-              
-              console.log(props)
               return (
                 <form className="form form-client" onSubmit={handleSubmit}>
                   {Steps[step]({ setType, nextStep, ...props })}

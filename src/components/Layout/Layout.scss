@@ -88,17 +88,28 @@
 
 .step {
   > .title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.3em;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @media (min-width: $m) {
+      margin-bottom: 50px;
+      font-size: 1.8rem;
+      line-height: 1.3em;
+    }
   }
 
   > .type-list {
     display: grid;
-    grid-template-columns:  repeat(auto-fill, minmax(167px, 1fr));
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    grid-gap: 15px;
     margin: 0;
+
+    @media (min-width: $m) {
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      grid-gap: 20px;
+    }
 
     > .item {
       cursor: pointer;

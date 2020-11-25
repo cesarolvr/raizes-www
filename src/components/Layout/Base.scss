@@ -612,8 +612,8 @@ pre tt:after {
   }
 
   &:disabled {
-    background: $gray-3;
-    color: $gray-5;
+    background: $gray-1;
+    color: $gray-3;
   }
 
   a {
@@ -629,6 +629,10 @@ pre tt:after {
 }
 
 .form {
+  overflow-y: scroll;
+  max-height: 100%;
+  margin: 0;
+  
   > .button {
     width: 100%;
   }

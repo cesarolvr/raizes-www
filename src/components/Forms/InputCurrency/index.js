@@ -1,20 +1,23 @@
 import React from "react"
 import classnames from "classnames"
+import { Field } from "formik"
+import MaskedInput from "react-text-mask"
 
 // Styles
-import "./Input.scss"
+import "./InputCurrency.scss"
 
 export default ({
-  type,
   name,
   value,
   error,
   touched,
   label,
+  mask,
   isRequired,
   handleChange = f => f,
   handleBlur = f => f,
 }) => {
+  console.log("3", error, touched)
   return (
     <div className="field-wrapper">
       <div
@@ -23,14 +26,20 @@ export default ({
           "-filled": value,
         })}
       >
-        <input
-          type={type}
-          id={`input-${name}`}
+        <Field
           name={name}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          value={value}
-          required={isRequired}
+          render={({ field }) => (
+            <MaskedInput
+              {...field}
+              mask={mask}
+              isRequired={isRequired}
+              id={`input-${name}`}
+              type="tel"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              placeholder="R$ 10.000,00"
+            />
+          )}
         />
         <label htmlFor={`input-${name}`}>{label}</label>
       </div>

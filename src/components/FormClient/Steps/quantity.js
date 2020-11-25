@@ -2,7 +2,7 @@ import React from "react"
 import createNumberMask from "text-mask-addons/dist/createNumberMask"
 
 // Components
-import Input from "../../Forms/Input"
+import Input from "../../Forms/InputCurrency"
 
 const defaultMaskOptions = {
   prefix: "R$",
@@ -19,6 +19,7 @@ const defaultMaskOptions = {
 
 const Quantity = ({
   handleChange,
+  handleBlur,
   touched,
   values,
   errors,
@@ -34,7 +35,7 @@ const Quantity = ({
         mask={currencyMask}
         name="quantity"
         handleChange={handleChange}
-        handleBlur={handleChange}
+        handleBlur={handleBlur}
         touched={touched}
         value={values.quantity}
         error={errors.quantity}
@@ -43,6 +44,7 @@ const Quantity = ({
       />
       <button
         className="button"
+        type="button"
         onClick={() => nextStep()}
         disabled={isSubmitting || !values.quantity}
       >
