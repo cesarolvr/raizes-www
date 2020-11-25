@@ -1,7 +1,8 @@
 import React from "react"
 
 // Components
-import Input from "../../Forms/Input"
+import Input from "../../Inputs/InputDefault"
+import InputMasked from "../../Inputs/InputMasked"
 
 const CompanyInformation = ({
   handleChange,
@@ -9,59 +10,90 @@ const CompanyInformation = ({
   values,
   handleBlur,
   errors,
-  nextStep,
   isSubmitting,
 }) => {
   return (
     <div className="step">
       <h2 className="title">Por fim, algumas informações sobre sua empresa</h2>
-      {[
-        {
-          label: "Nome",
-          name: "name",
-          type: "text",
-        },
-        {
-          label: "Email",
-          name: "email",
-          type: "text",
-        },
-        {
-          label: "CNPJ",
-          name: "cnpj",
-          type: "text",
-        },
-        {
-          label: "Razão Social",
-          name: "companyName",
-          type: "text",
-        },
-        {
-          label: "Telefone",
-          name: "phone",
-          type: "tel",
-        },
-      ].map(({ name, type, label }, index) => {
-        return (
-          <Input
-            key={index}
-            type={type}
-            name={name}
-            handleChange={handleChange}
-            handleBlur={handleBlur}
-            touched={touched}
-            value={values[name]}
-            error={errors[name]}
-            label={label}
-            isRequired={true}
-          />
-        )
-      })}
+      <Input
+        type="text"
+        name="name"
+        handleChange={handleChange}
+        handleBlur={handleBlur}
+        touched={touched}
+        value={values.name}
+        error={errors.name}
+        label="Nome"
+        isRequired={true}
+      />
+      <Input
+        type="email"
+        name="email"
+        handleChange={handleChange}
+        handleBlur={handleBlur}
+        touched={touched}
+        value={values.email}
+        error={errors.email}
+        label="Email"
+        isRequired={true}
+      />
+      <InputMasked
+        type="text"
+        name="cnpj"
+        mask={[
+          /\d/,
+          /\d/,
+          ".",
+          /\d/,
+          /\d/,
+          /\d/,
+          ".",
+          /\d/,
+          /\d/,
+          /\d/,
+          "/",
+          /\d/,
+          /\d/,
+          /\d/,
+          /\d/,
+          "-",
+          /\d/,
+          /\d/,
+        ]}
+        handleChange={handleChange}
+        handleBlur={handleBlur}
+        touched={touched}
+        value={values.cnpj}
+        error={errors.cnpj}
+        label="CNPJ"
+        isRequired={true}
+      />
+      <Input
+        type="text"
+        name="companyName"
+        handleChange={handleChange}
+        handleBlur={handleBlur}
+        touched={touched}
+        value={values.companyName}
+        error={errors.companyName}
+        label="Razão Social"
+        isRequired={true}
+      />
+      <Input
+        type="tel"
+        name="phone"
+        handleChange={handleChange}
+        handleBlur={handleBlur}
+        touched={touched}
+        value={values.phone}
+        error={errors.phone}
+        label="Telefone"
+        isRequired={true}
+      />
 
       <button
         className="button"
-        type="button"
-        onClick={() => nextStep()}
+        type="submit"
         disabled={
           isSubmitting ||
           !values.name ||

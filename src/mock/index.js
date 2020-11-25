@@ -1,3 +1,13 @@
+import React  from 'react';
+
+
+import {
+  faTimes,
+  faCheck,
+  faSpinner,
+} from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 export const links = [
   {
     text: "Para sua empresa",
@@ -51,4 +61,26 @@ export const products = {
     slug: "domicilio-bancario",
     title: "Domicílio Bancário",
   },
+}
+
+
+export const statusDictionary = {
+  success: () => (
+    <>
+      Enviado com sucesso
+      <FontAwesomeIcon icon={faCheck} />
+    </>
+  ),
+  pending: () => (
+    <>
+      Carregando...
+      <FontAwesomeIcon icon={faSpinner} />
+    </>
+  ),
+  error: () => (
+    <>
+      Falha ao enviar o formulário
+      <FontAwesomeIcon icon={faTimes} />
+    </>
+  ),
 }

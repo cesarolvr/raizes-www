@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Formik } from "formik"
+import classnames from "classnames"
 
 // Components
 import Aside from "../Aside"
@@ -8,8 +9,12 @@ import Steps from "./Steps"
 // Style
 import "./FormClient.scss"
 
+// Utils
+import { statusDictionary } from "../../mock"
+
 const FormContact = () => {
   const [step, setStep] = useState(0)
+  const [status, setStatus] = useState("")
 
   return (
     <section className="product-page hire">
@@ -45,11 +50,18 @@ const FormContact = () => {
                   !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
                 ) {
                   errors.email = "Email inválido"
+                } else if (!values.cnpj) {
+                  errors.cnpj = "CNPJ inválido"
+                } else if (!values.companyName) {
+                  errors.companyName = "Razão Social obrigatório"
+                } else if (!values.phone) {
+                  errors.phone = "Telefone obrigatório"
                 }
               }
               return errors
             }}
             onSubmit={(values, props) => {
+              setStatus("pending")
               console.log("Enviou", values, props)
             }}
           >
@@ -69,6 +81,15 @@ const FormContact = () => {
               )
             }}
           </Formik>
+          {status && (
+            <div
+              className={classnames("form-state", {
+                [`-${status}`]: status,
+              })}
+            >
+              {statusDictionary[status]()}
+            </div>
+          )}
         </div>
       </div>
     </section>

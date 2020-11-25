@@ -2,7 +2,7 @@ import React from "react"
 import createNumberMask from "text-mask-addons/dist/createNumberMask"
 
 // Components
-import Input from "../../Forms/InputCurrency"
+import Input from "../../Inputs/InputCurrency"
 
 const defaultMaskOptions = {
   prefix: "R$",
@@ -31,7 +31,7 @@ const Quantity = ({
     <div className="step">
       <h2 className="title">De quanto você precisa?</h2>
       <Input
-        type="currency"
+        type="text"
         mask={currencyMask}
         name="quantity"
         handleChange={handleChange}

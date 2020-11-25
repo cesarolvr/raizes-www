@@ -64,29 +64,28 @@
       display: flex;
       align-items: center;
       text-align: center;
+      justify-content: center;
       position: relative;
-      padding: 50px 40px 40px;
+      padding: 50px 0;
 
       .form {
         padding: 0;
       }
-
-      @media (min-width: $m) {
-        padding: 100px 40px;
-      }
-
+      
       @media (min-width: $m) {
         width: 50%;
         text-align: left;
-        padding-right: 80px;
+        padding: 100px 0px;
       }
 
       .form {
         width: 100%;
         margin: 0 auto;
+        padding: 0 20px;
+
         @media (min-width: $m) {
           margin: 0;
-          width: 80%;
+          padding: 0 40px;
         }
       }
 
@@ -116,45 +115,5 @@
     }
   }
 
-  .form-state {
-    margin: 20px auto;
-    width: 100%;
-    text-align: center;
-    border: 1px solid #eee;
-    color: #b3b3b3;
-    border-radius: 4px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    @media (min-width: $m) {
-      width: 80%;
-    }
-
-    &.-pending {
-      > svg {
-        animation: spin 1s infinite linear;
-      }
-    }
-
-    &.-success {
-      border-color: #4caf50;
-      color: #4caf50;
-    }
-
-    &.-error {
-      border-color: #ff5722;
-      color: #ff5722;
-    }
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  
 }

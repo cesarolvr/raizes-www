@@ -604,7 +604,7 @@ pre tt:after {
   padding: 13px 39px;
   font-weight: 700;
   max-width: 100%;
-  transition: background-color .3s ease;
+  transition: background-color 0.3s ease;
   cursor: pointer;
 
   &:hover {
@@ -632,7 +632,7 @@ pre tt:after {
   overflow-y: scroll;
   max-height: 100%;
   margin: 0;
-  
+
   > .button {
     width: 100%;
   }
@@ -737,5 +737,14 @@ pre tt:after {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

@@ -42,7 +42,7 @@ const Type = ({ setType }) => {
             <li
               key={index}
               className="item"
-              onClick={() => setType("type", products[index].slug)}
+              onClick={() => setType("type", products[index].title)}
             >
               {text}
               <FontAwesomeIcon icon={icon} />

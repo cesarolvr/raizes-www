@@ -4,20 +4,20 @@ import { Formik } from "formik"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import classnames from "classnames"
 import {
-  faTimes,
-  faCheck,
-  faSpinner,
   faEnvelopeOpen,
   faPhoneAlt,
   faMobileAlt,
 } from "@fortawesome/free-solid-svg-icons"
 
 // Components
-import Input from "../Forms/Input"
-import Textarea from "../Forms/Textarea"
+import Input from "../Inputs/InputDefault"
+import Textarea from "../Inputs/Textarea"
 
 // Style
 import "./FormContact.scss"
+
+// Utils
+import { statusDictionary } from "../../mock"
 
 const FormContact = () => {
   const validate = values => {
@@ -30,27 +30,6 @@ const FormContact = () => {
       errors.phone = "Campo de telefone obrigatório"
     }
     return errors
-  }
-
-  const statusDictionary = {
-    success: () => (
-      <>
-        Enviado com sucesso
-        <FontAwesomeIcon icon={faCheck} />
-      </>
-    ),
-    pending: () => (
-      <>
-        Carregando...
-        <FontAwesomeIcon icon={faSpinner} />
-      </>
-    ),
-    error: () => (
-      <>
-        Falha ao enviar o formulário
-        <FontAwesomeIcon icon={faTimes} />
-      </>
-    ),
   }
 
   const [isLoading, setIsloading] = useState(false)

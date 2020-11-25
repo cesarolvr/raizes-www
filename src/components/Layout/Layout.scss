@@ -45,7 +45,6 @@
   .container {
     display: flex;
     flex-direction: column;
-
     width: 100vw;
     max-width: none;
     padding: 0;
@@ -59,7 +58,9 @@
     > .holder {
       width: 100vw;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
 
       @media (min-width: $m) {
         width: 50%;
@@ -68,18 +69,18 @@
       }
 
       > .form {
-        width: 100vw;
+        width: 100%;
         background-color: white;
-        top: -30px;
+        margin-top: -30px;
         border-radius: 16px;
         box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.05);
         position: relative;
         z-index: 20;
-        padding: 50px 20px;
+        padding: 50px 20px 20px;
 
         @media (min-width: $m) {
           box-shadow: none;
-          padding: 100px 40px 100px 60px;
+          padding: 0px 40px;
         }
       }
     }
@@ -121,7 +122,7 @@
       font-weight: bold;
       font-size: 0.9rem;
       line-height: 1.5em;
-      transition: box-shadow .3s ease;
+      transition: box-shadow 0.3s ease;
 
       &:hover {
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
@@ -138,5 +139,38 @@
   > .button {
     margin-top: 30px;
     width: 100%;
+  }
+}
+
+.form-state {
+  margin: 20px auto;
+  width: calc(100% - 40px);
+  text-align: center;
+  border: 1px solid #eee;
+  color: #b3b3b3;
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: $m) {
+    width: calc(100% - 80px);
+  }
+
+  &.-pending {
+    > svg {
+      animation: spin 1s infinite linear;
+    }
+  }
+
+  &.-success {
+    border-color: #4caf50;
+    color: #4caf50;
+  }
+
+  &.-error {
+    border-color: #ff5722;
+    color: #ff5722;
   }
 }
