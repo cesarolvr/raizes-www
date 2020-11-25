@@ -13,12 +13,16 @@
   }
 
   &.-shrunken {
-    padding-left: 0;
+    @media (min-width: $m) {
+      padding-left: 0;
+    }
     .logo-wrapper {
-      margin-left: 13vw;
+      @media (min-width: $m) {
+        margin-left: 13vw;
 
-      img {
-        margin: 0;
+        img {
+          margin: 0;
+        }
       }
     }
   }

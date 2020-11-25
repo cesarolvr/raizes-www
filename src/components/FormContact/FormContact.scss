@@ -67,6 +67,10 @@
       position: relative;
       padding: 50px 40px 40px;
 
+      .form {
+        padding: 0;
+      }
+
       @media (min-width: $m) {
         padding: 100px 40px;
       }

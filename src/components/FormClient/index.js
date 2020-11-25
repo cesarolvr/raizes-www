@@ -26,15 +26,13 @@ const FormContact = () => {
   })
 
   return (
-    <section className="hire">
+    <section className="product-page hire">
       <div className="container">
         <div className="holder">
           <Aside
-            title="Contato"
-            subtitle="Fale Conosco"
-            description="Seja nosso cliente e conte com a experiência de um FIDC com
-              profissionais experientes e qualificados no mercado financeiro
-              aliado a uma sólida estrutura tecnológica."
+            title="Faça uma proposta"
+            subtitle="Cadastre-se"
+            description="Seja nosso cliente e conte com a experiência de um FIDC com profissionais experientes e qualificados no mercado financeiro aliado a uma sólida estrutura tecnológica."
           />
         </div>
         <div className="holder">

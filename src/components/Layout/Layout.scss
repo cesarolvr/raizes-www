@@ -16,7 +16,8 @@
   }
 
   > .container {
-    ul, ol {
+    ul,
+    ol {
       list-style: disc;
       padding-left: 20px;
       margin-bottom: 0;
@@ -30,6 +31,57 @@
       font-family: "Playfair Display", serif;
       font-weight: normal;
       font-size: 1.8rem;
+    }
+  }
+}
+
+.holder {
+  > .form {
+    padding: 0 60px;
+  }
+}
+
+.product-page {
+  .container {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100vw;
+    max-width: none;
+    padding: 0;
+
+    @media (min-width: $m) {
+      flex-direction: row;
+      height: 100%;
+      width: calc(100vw - 26vw);
+    }
+
+    > .holder {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+
+      @media (min-width: $m) {
+        width: 50%;
+        height: 100%;
+        padding: 0px;
+      }
+
+      > .form {
+        width: 100vw;
+        background-color: white;
+        top: -30px;
+        border-radius: 16px;
+        box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.05);
+        position: relative;
+        z-index: 20;
+        padding: 100px 20px;
+
+        @media (min-width: $m) {
+          box-shadow: none;
+          padding: 100px 40px;
+        }
+      }
     }
   }
 }

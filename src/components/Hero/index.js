@@ -13,6 +13,8 @@ const Hero = ({
 }) => {
   const backgroundContent = {
     background: backgroundColor ? backgroundColor : `url("${backgroundPath}")`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no repeat',
   }
   return (
     <section
