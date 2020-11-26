@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { Formik } from "formik"
 import classnames from "classnames"
+import { navigate } from 'gatsby'
+
 
 // Components
 import Aside from "../Aside"
@@ -63,6 +65,7 @@ const FormContact = () => {
             onSubmit={(values, props) => {
               setStatus("pending")
               console.log("Enviou", values, props)
+              navigate('/sucesso/cliente');
             }}
           >
             {({ handleSubmit, setFieldValue, ...props }) => {

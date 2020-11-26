@@ -87,7 +87,9 @@
     @media (min-width: $m) {
       font-size: 0.9em;
       margin: 0px 20px;
+      line-height: 1.2em;
       padding: 0 5px;
+      flex-shrink: 0;
     }
 
     &:after {

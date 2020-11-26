@@ -1,0 +1,36 @@
+.roadmap-section {
+  padding: 50px 0px 20px;
+
+  @media (min-width: $m) {
+    padding: 80px 0px;
+  }
+
+  .roadmap-list {
+
+    .item {
+      position: relative;
+      padding: 40px 60px 40px 0;
+      border-bottom: 1px solid $gray-3;
+      margin: 0 0 0 60px;
+    }
+
+    .title {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .description {
+      margin: 0;
+    }
+    
+    .number {
+      font-size: 3rem;
+      font-weight: bold;
+      color: $blue-2;
+      position: absolute;
+      top: 50px;
+      left: -60px;
+      display: block;
+    }
+  }
+}
