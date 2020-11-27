@@ -1,8 +1,8 @@
+import { endpoints } from "gatsby-env-variables"
 import React, { useState } from "react"
 import { Formik } from "formik"
 import classnames from "classnames"
-import { navigate } from 'gatsby'
-
+import { navigate } from "gatsby"
 
 // Components
 import Aside from "../Aside"
@@ -62,10 +62,30 @@ const FormContact = () => {
               }
               return errors
             }}
-            onSubmit={(values, props) => {
+            onSubmit={(values, { resetForm }) => {
               setStatus("pending")
-              console.log("Enviou", values, props)
-              navigate('/sucesso/cliente');
+              var myHeaders = new Headers()
+              myHeaders.append("Content-Type", "application/json")
+              var raw = JSON.stringify({ data: values })
+              fetch(endpoints.leadClient, {
+                method: "POST",
+                headers: myHeaders,
+                body: raw,
+                redirect: "follow",
+              })
+                .then(({ status }) => {
+                  if (status === 200) {
+                    setStatus("success")
+                    resetForm({})
+                    navigate("/sucesso/cliente")
+                  } else {
+                    setStatus("error")
+                  }
+                })
+                .catch(err => {
+                  console.log(err)
+                  setStatus("error")
+                })
             }}
           >
             {({ handleSubmit, setFieldValue, ...props }) => {

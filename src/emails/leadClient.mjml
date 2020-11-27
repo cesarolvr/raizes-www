@@ -6,13 +6,13 @@
         <mj-image width="100px" height="28px" title="Logo" src="https://firebasestorage.googleapis.com/v0/b/raizes-b6208.appspot.com/o/email-logo-dark.png?alt=media&token=75b0b912-a37b-459a-940b-0d68b4e9085c"></mj-image>
 
         <mj-divider border-color="#00ba82"></mj-divider>
-        <mj-text padding-top="25px" padding-bottom="20px" font-size="18px" color="white" font-family="helvetica" align="center">Novo contato do site</mj-text>
+        <mj-text padding-top="25px" padding-bottom="20px" font-size="18px" color="white" font-family="helvetica" align="center">Novo cliente em potêncial</mj-text>
 
       </mj-column>
     </mj-section>
     <mj-section background-color="#fafafa" padding-top="0px" padding-bottom="50px">
       <mj-column>
-        <mj-text padding-top="0px" padding-bottom="20px" font-size="16px" color="black" font-family="helvetica" align="center" line-height="24px"><br></br>Um lead em potêncial entrou em contato pelo site <strong>(fundoraizes.com.br/contato)</strong></mj-text>
+        <mj-text padding-top="0px" padding-bottom="20px" font-size="16px" color="black" font-family="helvetica" align="center" line-height="24px"><br></br>Um cliente em potêncial entrou em contato pelo site: <strong>(fundoraizes.com.br/contratar)</strong></mj-text>
         <mj-text padding-top="25px" padding-bottom="5px" font-size="16px" color="black" font-family="helvetica" align="center">
           <strong>
             Nome:
@@ -30,9 +30,23 @@
         </mj-text>
         <mj-text padding-top="10px" padding-bottom="5px" font-size="16px" color="black" font-family="helvetica" align="center">
           <strong>
-            Mensagem:
-            <br></br>
-          </strong> ${message}
+            Nome da empresa:
+          </strong> ${companyName}
+        </mj-text>
+         <mj-text padding-top="10px" padding-bottom="5px" font-size="16px" color="black" font-family="helvetica" align="center">
+          <strong>
+            CNPJ:
+          </strong> ${cnpj}
+        </mj-text>
+        <mj-text padding-top="10px" padding-bottom="5px" font-size="16px" color="black" font-family="helvetica" align="center">
+          <strong>
+            Quantia:
+          </strong> ${quantity}
+        </mj-text>
+        <mj-text padding-top="10px" padding-bottom="5px" font-size="16px" color="black" font-family="helvetica" align="center">
+          <strong>
+            Serviço solicitado:
+          </strong> ${type}
         </mj-text>
       </mj-column>
 
