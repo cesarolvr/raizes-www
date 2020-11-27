@@ -11,7 +11,7 @@ const Type = ({ setType }) => {
       <h2 className="title">
         Qual tipo de crédito se adequa melhor a sua necessidade?
       </h2>
-      <ul className="type-list">
+      <ul className="card-list">
         {[
           {
             text: "Antecipação de Recebíveis",

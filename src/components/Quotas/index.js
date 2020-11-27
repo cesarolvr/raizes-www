@@ -17,7 +17,9 @@ const Quotas = () => {
             <h5 className="price">R$ 300.000</h5>
           </li>
         </ol>
-          <button className="button">Quero investir</button>
+        <button className="button">
+          <a href="/investir/">Quero investir</a>
+        </button>
       </div>
     </section>
   )

@@ -9,21 +9,22 @@ import Aside from "../Aside"
 import Steps from "./Steps"
 
 // Style
-import "./FormClient.scss"
+import "./FormInvestor.scss"
 
 // Utils
-import { statusDictionary } from "../../mock"
+import { investorsType, statusDictionary } from "../../mock"
 
 export default () => {
   const [step, setStep] = useState(0)
+  const [flow, setFlow] = useState("pf")
   const [status, setStatus] = useState("")
 
   return (
-    <section className="product-page hire">
+    <section className="product-page invest">
       <div className="container">
         <div className="holder">
           <Aside
-            title="Faça uma proposta"
+            title="Seja um investidor"
             subtitle="Cadastre-se"
             description="Seja nosso cliente e conte com a experiência de um FIDC com profissionais experientes e qualificados no mercado financeiro aliado a uma sólida estrutura tecnológica."
           />
@@ -31,35 +32,36 @@ export default () => {
         <div className="holder">
           <Formik
             initialValues={{
-              type: "",
-              quantity: "",
+              investorType: "",
+              quota: "",
               name: "",
               email: "",
               cnpj: "",
+              cpf: "",
               companyName: "",
               phone: "",
             }}
             validate={values => {
               const errors = {}
-              if (step === 1) {
-                if (!values.quantity) {
-                  errors.quantity = "Valor obrigatório"
-                }
-              } else if (step === 2) {
-                if (!values.name) {
-                  errors.name = "Campo de nome obrigatório"
-                } else if (
-                  !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                ) {
-                  errors.email = "Email inválido"
-                } else if (!values.cnpj) {
-                  errors.cnpj = "CNPJ inválido"
-                } else if (!values.companyName) {
-                  errors.companyName = "Razão Social obrigatório"
-                } else if (!values.phone) {
-                  errors.phone = "Telefone obrigatório"
-                }
-              }
+              // if (step === 1) {
+              //   if (!values.quantity) {
+              //     errors.quantity = "Valor obrigatório"
+              //   }
+              // } else if (step === 2) {
+              //   if (!values.name) {
+              //     errors.name = "Campo de nome obrigatório"
+              //   } else if (
+              //     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+              //   ) {
+              //     errors.email = "Email inválido"
+              //   } else if (!values.cnpj) {
+              //     errors.cnpj = "CNPJ inválido"
+              //   } else if (!values.companyName) {
+              //     errors.companyName = "Razão Social obrigatório"
+              //   } else if (!values.phone) {
+              //     errors.phone = "Telefone obrigatório"
+              //   }
+              // }
               return errors
             }}
             onSubmit={(values, { resetForm }) => {
@@ -67,7 +69,7 @@ export default () => {
               var myHeaders = new Headers()
               myHeaders.append("Content-Type", "application/json")
               var raw = JSON.stringify({ data: values })
-              fetch(endpoints.leadClient, {
+              fetch(endpoints.leadInvestor, {
                 method: "POST",
                 headers: myHeaders,
                 body: raw,
@@ -77,7 +79,7 @@ export default () => {
                   if (status === 200) {
                     setStatus("success")
                     resetForm({})
-                    navigate("/sucesso/cliente")
+                    navigate(`/sucesso/investidor/${investorsType}`)
                   } else {
                     setStatus("error")
                   }
@@ -91,6 +93,12 @@ export default () => {
             {({ handleSubmit, setFieldValue, ...props }) => {
               const setType = (type, value) => {
                 setFieldValue(type, value, false)
+                setFlow(value)
+                setStep(step + 1)
+              }
+
+              const setQuota = (type, value) => {
+                setFieldValue(type, value, false)
                 setStep(step + 1)
               }
 
@@ -98,8 +106,8 @@ export default () => {
                 setStep(step + 1)
               }
               return (
-                <form className="form form-client" onSubmit={handleSubmit}>
-                  {Steps[step]({ setType, nextStep, ...props })}
+                <form className="form form-investor" onSubmit={handleSubmit}>
+                  {Steps[step]({ setType, nextStep, setQuota, flow, ...props })}
                 </form>
               )
             }}
