@@ -14,7 +14,6 @@ const CompanyInformation = ({
   flow,
 }) => {
   const isPfFlow = flow === "pf"
-  console.log(flow)
   return (
     <div className="step">
       <h2 className="title">Por fim, algumas informações sobre sua empresa</h2>
@@ -134,8 +133,6 @@ const CompanyInformation = ({
           isSubmitting ||
           !values.name ||
           !values.email ||
-          !values.cnpj ||
-          !values.companyName ||
           !values.phone
         }
       >

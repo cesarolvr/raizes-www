@@ -78,8 +78,8 @@ export default () => {
                 .then(({ status }) => {
                   if (status === 200) {
                     setStatus("success")
+                    navigate(`/sucesso/investidor/${values.investorType}`)
                     resetForm({})
-                    navigate(`/sucesso/investidor/${investorsType}`)
                   } else {
                     setStatus("error")
                   }
