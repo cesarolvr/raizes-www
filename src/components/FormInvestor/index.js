@@ -12,7 +12,7 @@ import Steps from "./Steps"
 import "./FormInvestor.scss"
 
 // Utils
-import { investorsType, statusDictionary } from "../../mock"
+import { statusDictionary } from "../../mock"
 
 export default () => {
   const [step, setStep] = useState(0)
@@ -68,7 +68,12 @@ export default () => {
               setStatus("pending")
               var myHeaders = new Headers()
               myHeaders.append("Content-Type", "application/json")
-              var raw = JSON.stringify({ data: values })
+              var raw = JSON.stringify({
+                data: {
+                  ...values,
+                  investorsType: values.investorType.toUpperCase(),
+                },
+              })
               fetch(endpoints.leadInvestor, {
                 method: "POST",
                 headers: myHeaders,
@@ -96,6 +101,8 @@ export default () => {
                 setFlow(value)
                 setStep(step + 1)
               }
+
+              console.log(props)
 
               const setQuota = (type, value) => {
                 setFieldValue(type, value, false)

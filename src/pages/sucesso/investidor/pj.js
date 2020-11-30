@@ -18,7 +18,7 @@ export default () => {
       <SEO title="Sucesso" />
       <Header />
       <Hero
-        title="Recebemos sua proposta"
+        title="Passo a passo para seu cadastro"
         description="Agora para a análise precisaremos de alguns documentos da sua empresa. Sua proposta e  documentação passará por um comitê que vai analisar seu pedido e as próximas etapas são: "
         backgroundColor={"#006BD0"}
       />
@@ -26,21 +26,27 @@ export default () => {
         steps={[
           {
             number: "1",
-            title: "Análise prévia",
+            title: "Cadastra Socopa",
             description:
-              "Nessa primeira etapa iremos fazer uma análise da sua empresa. Caso aprovada, enviaremos um email com os documentos necessários para a próxima etapa. ",
+              "Acesse <a class='color-blue -link' href='https://www.socopainvest.com.br/cadastro-passos/'>https://www.socopainvest.com.br/cadastro-passos/</a> e preencha o formulário até o final. A Socopa é um corretora de valores parceira do fundo raízes.",
           },
           {
             number: "2",
-            title: "Comitê de avaliação",
+            title: "Preencha a ficha cadastral",
             description:
-              "Formamos um comitê que analisa a viabilidade da sua proposta, utilizamos uma sólida politica de crédito, considerando ciclo operacional, financeiro e econômico, garantias, governança, estrutura de capital e societária.",
+              "<a class='color-blue -link'>Enviado por email</a> |  Preciamos que você preencha e nos envie por email a Ficha Cadastral de pessoa Jurídica, com informações sobre sua a empresa.",
           },
           {
             number: "3",
-            title: "Aprovação",
+            title: "Preencha o questionário do perfil do investidor ",
             description:
-              "Nessa primeira etapa iremos fazer uma análise da sua empresa. Caso aprodava, enviaremos um email com os documentos necessários para a próxima etapa. ",
+              "<strong class='color-blue'>Enviado por email</strong> |  Nessa etapa precisamos saber o seu perfil de investidor. São apenas 11 perguntas sobre seus objetivos e expectativas financeiras. Nos enviar digitalmente para <strong class='color-blue'>documentos@fundoraízes.com.br</strong>",
+          },
+          {
+            number: "4",
+            title: "Envio da documentação para o Fundo raízes",
+            description:
+              "A última etapa é enviar o questionátio e o termo de adesão para nosso escritório. Após que seu cadastro na Socopa for validado enviaremos outro email sobre esta etapa. ",
           },
         ]}
       />
