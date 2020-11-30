@@ -43,25 +43,21 @@ export default () => {
             }}
             validate={values => {
               const errors = {}
-              // if (step === 1) {
-              //   if (!values.quantity) {
-              //     errors.quantity = "Valor obrigatório"
-              //   }
-              // } else if (step === 2) {
-              //   if (!values.name) {
-              //     errors.name = "Campo de nome obrigatório"
-              //   } else if (
-              //     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-              //   ) {
-              //     errors.email = "Email inválido"
-              //   } else if (!values.cnpj) {
-              //     errors.cnpj = "CNPJ inválido"
-              //   } else if (!values.companyName) {
-              //     errors.companyName = "Razão Social obrigatório"
-              //   } else if (!values.phone) {
-              //     errors.phone = "Telefone obrigatório"
-              //   }
-              // }
+              if (step === 2) {
+                if (!values.name) {
+                  errors.name = "Campo de nome obrigatório"
+                } else if (
+                  !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                ) {
+                  errors.email = "Email inválido"
+                } else if (!values.cnpj) {
+                  errors.cnpj = "CNPJ inválido"
+                } else if (!values.cpf) {
+                  errors.cpf = "CPF inválido"
+                } else if (!values.phone) {
+                  errors.phone = "Telefone obrigatório"
+                }
+              }
               return errors
             }}
             onSubmit={(values, { resetForm }) => {
@@ -101,8 +97,6 @@ export default () => {
                 setFlow(value)
                 setStep(step + 1)
               }
-
-              console.log(props)
 
               const setQuota = (type, value) => {
                 setFieldValue(type, value, false)
