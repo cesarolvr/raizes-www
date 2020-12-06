@@ -5,8 +5,9 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 const Type = ({ setType }) => {
   return (
     <div className="step">
-      <h2 className="title">Você é pessoa física ou pessoa jurídica?</h2>
-      <ul className="card-list">
+      <h2 className="title" data-aos="fade-up"
+              data-aos-delay={100}>Você é pessoa física ou pessoa jurídica?</h2>
+      <ul className="card-list" data-aos="fade-up" data-aos-delay={200}>
         {[
           {
             text: "Pessoa física",

@@ -43,7 +43,8 @@ const Accordion = ({
         <div className="tabs">
           {list.map(({ question, answer }, index) => {
             return (
-              <div className="tab" key={index}>
+              <div className="tab" key={index} data-aos="fade-up"
+              data-aos-delay={index * 50}>
                 <input type="checkbox" id={`chck${index + 1}`} />
                 <label className="tab-label" htmlFor={`chck${index + 1}`}>
                   {question}

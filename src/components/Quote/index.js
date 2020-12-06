@@ -13,11 +13,11 @@ const Quote = () => {
       style={{ backgroundImage: `url(${backgroundQuote})` }}
     >
       <div className="container">
-        <p className="phrase">
+        <p className="phrase" data-aos="fade-up" data-aos-delay={50}>
           “The right question is overwhelmingly more important than the right
           answer to the wrong question.”
         </p>
-        <p className="author">Alvin Toffler</p>
+        <p className="author" data-aos="fade-up" data-aos-delay={150}>Alvin Toffler</p>
       </div>
     </section>
   )

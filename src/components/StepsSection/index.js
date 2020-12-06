@@ -35,7 +35,7 @@ const StepsSection = ({
         <ol className="steps-list">
           {list.map(({ number, title, description }, index) => {
             return (
-              <li className="item" key={index}>
+              <li className="item" key={index}  data-aos="fade-up" data-aos-delay={index * 50}>
                 <h5 className="item-number">{number}</h5>
                 <p className="item-title">{title}</p>
                 <p className="item-description">{description}</p>
@@ -43,7 +43,7 @@ const StepsSection = ({
             )
           })}
         </ol>
-        <button className="button">
+        <button className="button" data-aos="fade-up" data-aos-delay={300}>
           <a href="/contratar/">Contratar</a>
         </button>
       </div>

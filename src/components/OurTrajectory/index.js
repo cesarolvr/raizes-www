@@ -58,7 +58,8 @@ const OurTrajectory = ({
           <div className="timeline-list">
             {timeline.map(({ year, money, description, complement }, index) => {
               return (
-                <div className="item" key={index}>
+                <div className="item" key={index} data-aos="fade-up"
+                data-aos-delay={index * 100}>
                   <div className="content">
                     <h4 className="year">{year}</h4>
                     <h5 className="money">{money}</h5>

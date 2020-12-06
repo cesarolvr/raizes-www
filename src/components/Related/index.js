@@ -9,14 +9,14 @@ const Related = ({ title = "Conheça também", list = [], id, description }) => 
   return (
     <section className="section related-section" id={id}>
       <div className="container">
-        <h2 className="title">{title}</h2>
+        <h2 className="title" data-aos="fade-up" data-aos-delay="150">{title}</h2>
 
         <hr className="divider" />
-        <p className="description">{description}</p>
+        <p className="description" data-aos="fade-up" data-aos-delay="250">{description}</p>
         <ul className="related-list">
           {list.map(({ image, title, description, link }, index) => {
             return (
-              <li className="item" key={index}>
+              <li className="item" key={index} data-aos="fade-up" data-aos-delay={index * 50}>
                 <img className="item-thumb" src={image} alt={`Outro produto que o Fundo Raízes oferece: ${title}`} />
                 <p className="item-title">{title}</p>
                 <p className="item-description">{description}</p>

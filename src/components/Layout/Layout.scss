@@ -125,7 +125,7 @@
       font-size: 0.9rem;
       line-height: 1.5em;
       transition: box-shadow 0.3s ease;
-      
+
       .subtitle {
         color: $gray-5;
         font-weight: 400;
@@ -183,4 +183,8 @@
     border-color: #ff5722;
     color: #ff5722;
   }
+}
+
+[data-aos="fade-up"] {
+  transform: translate3d(0, 20px, 0);
 }

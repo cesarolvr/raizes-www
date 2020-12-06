@@ -5,7 +5,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 export default ({ setQuota }) => {
   return (
     <div className="step">
-      <h2 className="title">Você tem interesse em qual das nossas cotas?</h2>
+      <h2 className="title" >Você tem interesse em qual das nossas cotas?</h2>
       <ul className="card-list">
         {[
           {

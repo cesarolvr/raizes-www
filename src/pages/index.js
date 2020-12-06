@@ -39,7 +39,7 @@ const Home = () => {
       />
       <article className="article">
         <div className="container">
-          <p>
+          <p data-aos="fade-up">
             Raízes é um Fundo de Investimento em Direitos Creditórios
             especializado na compra de recebíveis provenientes de vendas
             mercantis de bens e serviços ou contratos de fornecimento nos

@@ -8,14 +8,14 @@ const OurProcesses = () => {
     <section className="section ourprocesses-section">
       <div className="container">
         <div className="holder">
-          <div className="title">Nosso processo</div>
+          <div className="title" data-aos="fade-up" data-aos-delay={50}>Nosso processo</div>
           <hr className="divider" />
         </div>
         <div className="holder">
           <ul className="processes-list">
             <li className="item">
-              <h3 className="item-title">Avaliação de crédito</h3>
-              <p className="subtitle">
+              <h3 className="item-title" data-aos="fade-up" data-aos-delay={150}>Avaliação de crédito</h3>
+              <p className="subtitle" data-aos="fade-up" data-aos-delay={200}>
                 As decisões de concessão de crédito são tomadas em comitê,
                 baseadas em uma sólida política de crédito. Analisamos: ciclo
                 operacional, financeiro e econômico, garantias, governança,
@@ -27,8 +27,8 @@ const OurProcesses = () => {
               </p>
             </li>
             <li className="item">
-              <h3 className="item-title">Avaliação da operação de crédito</h3>
-              <p className="subtitle">
+              <h3 className="item-title" data-aos="fade-up" data-aos-delay={250}>Avaliação da operação de crédito</h3>
+              <p className="subtitle" data-aos="fade-up" data-aos-delay={300}>
                 As operações passam por uma minuciosa avaliação de risco
                 operacional e de crédito. Temos como procedimento: confirmação
                 de títulos, análise do sacado e contratos, concentração e prazo
@@ -36,8 +36,8 @@ const OurProcesses = () => {
               </p>
             </li>
             <li className="item">
-              <h3 className="item-title">Monitoramento e Cobrança</h3>
-              <p className="subtitle">
+              <h3 className="item-title"  data-aos="fade-up" data-aos-delay={350}>Monitoramento e Cobrança</h3>
+              <p className="subtitle" data-aos="fade-up" data-aos-delay={400}>
                 Acompanhamento diário de nossos clientes, validação dos títulos,
                 índice de liquidez e restritivos dos cedentes e
                 sacados.Executamos os comitês revisionais e visitas constantes

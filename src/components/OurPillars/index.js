@@ -15,7 +15,8 @@ const OurPillars = () => {
         <h2 className="title">Nossos pilares</h2>
         <hr className="divider" />
         <ol className="pillars-list">
-          <li className="item">
+          <li className="item" data-aos="fade-up"
+              data-aos-delay={100}>
             <img className="icon" src={pillar1} alt="" />
             <p className="title">Segurança</p>
             <h5 className="description">
@@ -23,7 +24,8 @@ const OurPillars = () => {
               política de crédito
             </h5>
           </li>
-          <li className="item">
+          <li className="item" data-aos="fade-up"
+              data-aos-delay={200}>
             <img className="icon" src={pillar2} alt=""  />
             <p className="title">Inteligência</p>
             <h5 className="description">
@@ -31,7 +33,8 @@ const OurPillars = () => {
               no mercado financeiro
             </h5>
           </li>
-          <li className="item">
+          <li className="item" data-aos="fade-up"
+              data-aos-delay={300}>
             <img className="icon" src={pillar3} alt=""  />
             <p className="title">Tecnologia</p>
             <h5 className="description">

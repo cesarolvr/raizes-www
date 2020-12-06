@@ -1,11 +1,8 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
+import React, { useEffect } from "react"
+import AOS from "aos"
 
-import React from "react"
+// Styles
+import "aos/dist/aos.css"
 
 // Styles
 import "./Base.scss"
@@ -13,6 +10,14 @@ import "./Helpers.scss"
 import "./Layout.scss"
 
 const Layout = ({ children, className }) => {
+  useEffect(() => {
+    AOS.init({
+      offset: 10,
+      delay: 0,
+      duration: 500,
+      easing: "ease",
+    })
+  }, [])
   return <main className={className}>{children}</main>
 }
 
