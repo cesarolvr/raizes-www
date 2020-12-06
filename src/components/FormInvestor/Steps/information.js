@@ -12,9 +12,10 @@ const CompanyInformation = ({
   errors,
   isSubmitting,
   flow,
+  ...props
 }) => {
   const isPfFlow = flow === "pf"
-  const documentValue = values[values.cnpj ? 'cnpj' : 'cpf']
+  const documentValue = values[values.cnpj ? "cnpj" : "cpf"]
   return (
     <div className="step">
       <h2 className="title">Por fim, algumas informações sobre sua empresa</h2>
@@ -64,10 +65,8 @@ const CompanyInformation = ({
           handleBlur={handleBlur}
           touched={touched}
           value={values.cpf}
-          minLength={10}
           error={errors.cpf}
           label="CPF"
-          isRequired={true}
         />
       ) : (
         <InputMasked
@@ -98,9 +97,7 @@ const CompanyInformation = ({
           touched={touched}
           value={values.cnpj}
           error={errors.cnpj}
-          minLength={10}
           label="CNPJ"
-          isRequired={true}
         />
       )}
       {!isPfFlow ? (
@@ -113,7 +110,6 @@ const CompanyInformation = ({
           value={values.companyName}
           error={errors.companyName}
           label="Razão Social"
-          isRequired={true}
         />
       ) : null}
 

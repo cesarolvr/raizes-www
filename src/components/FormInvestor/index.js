@@ -42,6 +42,7 @@ export default () => {
               phone: "",
             }}
             validate={values => {
+              const isPfFlow = flow === "pf"
               const errors = {}
               if (step === 2) {
                 if (!values.name) {
@@ -50,10 +51,8 @@ export default () => {
                   !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
                 ) {
                   errors.email = "Email inválido"
-                } else if (!values.cnpj) {
-                  errors.cnpj = "CNPJ inválido"
-                } else if (!values.cpf) {
-                  errors.cpf = "CPF inválido"
+                } else if (!values[isPfFlow ? 'cpf' : 'cnpj']) {
+                  errors[isPfFlow ? 'cpf' : 'cnpj'] = "Número de documento inválido"
                 } else if (!values.phone) {
                   errors.phone = "Telefone obrigatório"
                 }
