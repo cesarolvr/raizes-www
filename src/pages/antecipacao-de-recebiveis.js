@@ -12,7 +12,7 @@ import Contact from "../components/Contact"
 
 // Assets
 import backgroundPath from "../images/hero-antecipacao-de-recebiveis.jpg"
-import image1 from "../images/thumb-cedula-de-produtor-rural.jpg"
+import image1 from "../images/thumb-home-equity.jpg"
 import image2 from "../images/thumb-capital-de-giro.jpg"
 import image3 from "../images/thumb-antecipacao-de-contratos.jpg"
 
@@ -25,7 +25,7 @@ export default () => {
         backgroundPath={backgroundPath}
         title="Antecipação de Recebíveis"
         subtitle="Produtos"
-        description="Modalidade de crédito perfeita para produtores rurais"
+        description="Modalidade de credito para fluxo financeiro diário."
       />
       <article className="article">
         <div className="container">
@@ -71,23 +71,23 @@ export default () => {
         list={[
           {
             image: image1,
-            title: "Compra de recebíveis",
+            title: "Home Equity",
             description:
-              "Modalidade de crédito perfeita para produtores rurais",
-            link: "/antecipacao-de-recebiveis/",
+              "Modalidade de credito para prazos mais longos",
+            link: "/home-equity/",
           },
           {
             image: image2,
             title: "Capital de Giro",
             description:
-              "Modalidade de crédito perfeita para produtores rurais",
+              "Modalidade para incrementar  a disponibilidade  de caixa.",
             link: "/capital-de-giro/",
           },
           {
             image: image3,
             title: "Antecipação de recebíveis",
             description:
-              "Modalidade de crédito perfeita para produtores rurais",
+              "Modalidade de credito para fluxo financeiro diário",
             link: "/antecipacao-de-recebiveis/",
           },
         ]}

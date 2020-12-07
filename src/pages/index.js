@@ -33,6 +33,7 @@ const Home = () => {
       <Header />
       <Hero
         backgroundPath={backgroundPath}
+        backgroundVideo
         title="Experiência, Tecnologia, Inteligência"
         subtitle="Fundo Raízes"
         description="Soluções de crédito para pequenas e médias empresas"
@@ -55,15 +56,14 @@ const Home = () => {
           {
             image: image1,
             title: "Antecipação de recebíveis",
-            description:
-              "Modalidade de crédito perfeita para produtores rurais",
+            description: "Modalidade de crédito para fluxo financeiro diário",
             link: "/antecipacao-de-recebiveis/",
           },
           {
             image: image2,
             title: "Capital de Giro",
             description:
-              "Modalidade de crédito perfeita para produtores rurais",
+              "Modalidade para incrementar  a disponibilidade  de caixa",
             link: "/capital-de-giro/",
           },
           {
@@ -76,22 +76,20 @@ const Home = () => {
           {
             image: image4,
             title: "Home equity",
-            description:
-              "Modalidade de crédito perfeita para produtores rurais",
+            description: "Modalidade de credito para prazos mais longos",
             link: "/home-equity/",
           },
           {
             image: image5,
             title: "Domicílio bancário",
-            description:
-              "Modalidade de crédito perfeita para produtores rurais",
+            description: "Modalidade para aumentar a liquidez dos recebíveis",
             link: "/domicilio-bancario/",
           },
           {
             image: image6,
             title: "Antecipação de contratos",
             description:
-              "Modalidade de crédito perfeita para produtores rurais",
+              "Antecipe contratos de suprimento ou prestação de serviços",
             link: "/antecipacao-de-contratos/",
           },
         ]}

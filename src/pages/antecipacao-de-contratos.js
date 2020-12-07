@@ -12,7 +12,7 @@ import Contact from "../components/Contact"
 
 // Assets
 import backgroundPath from "../images/hero-antecipacao-de-contratos.jpg"
-import image1 from "../images/thumb-cedula-de-produtor-rural.jpg"
+import image1 from "../images/thumb-domicilio-bancario.jpg"
 import image2 from "../images/thumb-capital-de-giro.jpg"
 import image3 from "../images/thumb-antecipacao-de-contratos.jpg"
 
@@ -25,7 +25,7 @@ export default () => {
         backgroundPath={backgroundPath}
         title="Antecipação de Contratos"
         subtitle="Produtos"
-        description="Modalidade de crédito perfeita para produtores rurais"
+        description="Modalidade de credito para antecipação de contratos de suprimento, arrendamento ou prestação de serviços."
       />
       <article className="article">
         <div className="container">
@@ -183,23 +183,21 @@ export default () => {
         list={[
           {
             image: image1,
-            title: "Compra de recebíveis",
-            description:
-              "Modalidade de crédito perfeita para produtores rurais",
-            link: "/antecipacao-de-recebiveis/",
+            title: "Domicílio bancário",
+            description: "Modalidade para aumentar a liquidez dos recebíveis",
+            link: "/domicilio-bancario/",
           },
           {
             image: image2,
             title: "Capital de Giro",
             description:
-              "Modalidade de crédito perfeita para produtores rurais",
+              "Modalidade para incrementar  a disponibilidade  de caixa",
             link: "/capital-de-giro/",
           },
           {
             image: image3,
             title: "Antecipação de recebíveis",
-            description:
-              "Modalidade de crédito perfeita para produtores rurais",
+            description: "Modalidade de credito para fluxo financeiro diário",
             link: "/antecipacao-de-recebiveis/",
           },
         ]}

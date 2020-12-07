@@ -6,46 +6,49 @@ import "./OurTrajectory.scss"
 const OurTrajectory = ({
   timeline = [
     {
+      year: "2014",
+      description: "Constituição da Raizes perante aos órgãos reguladores",
+    },
+    {
       year: "2015",
       money: "30 milhões",
       complement: "em créditos concedidos",
-      description:
-        "O Fundo Raízes inicia suas operácões em São Paulo,  concedendo 30 milhões em crédito para 10 clientes",
+      description: "Inicio das operações com 30 clientes ativos ",
     },
     {
       year: "2016",
       money: "50 milhões",
       complement: "em créditos concedidos",
       description:
-        "O Fundo Raízes inicia suas operácões em São Paulo,  concedendo 30 milhões em crédito para 10 clientes",
+        "Implementação de 3 sistemas gerenciais e de Risco para a analise de decisão. ",
     },
     {
       year: "2017",
       money: "107 milhões",
       complement: "em créditos concedidos",
       description:
-        "O Fundo Raízes inicia suas operácões em São Paulo,  concedendo 30 milhões em crédito para 10 clientes",
+        "Desenvolvimento do Banco Digital Raizes, melhoria constante em nossos processos de gestão e risco. 85 clientes ativos.",
     },
     {
       year: "2018",
       money: "150 milhões",
       complement: "em créditos concedidos",
       description:
-        "O Fundo Raízes inicia suas operácões em São Paulo,  concedendo 30 milhões em crédito para 10 clientes",
+        "Contratação do gestor de risco, implementação de novas politicas de governança para o mercado  institucional e investidores.  130 clientes ativos e 60 Escrows accounts abertas",
     },
     {
       year: "2019",
       money: "215 milhões",
       complement: "em créditos concedidos",
       description:
-        "O Fundo Raízes inicia suas operácões em São Paulo,  concedendo 30 milhões em crédito para 10 clientes",
+        "Execução  e implementação do Banco Digital Raizes. 165 clientes ativos, 20 colaboradores 7 sistemas integrados sendo :ERP, CRM, Risco, LwCrow BI, SisBacen, Jusbrasil, Upminer",
     },
     {
       year: "2020",
       money: "180 milhões",
       complement: "em créditos concedidos",
       description:
-        "O Fundo Raízes inicia suas operácões em São Paulo,  concedendo 30 milhões em crédito para 10 clientes",
+        "Implementação da Nova Plataforma Agricola visando negociação de CPR para credito Rural e Boi Gordo. Expansão comercial para o interior de MT com novas estruturas de credito",
     },
   ],
 }) => {
@@ -58,8 +61,12 @@ const OurTrajectory = ({
           <div className="timeline-list">
             {timeline.map(({ year, money, description, complement }, index) => {
               return (
-                <div className="item" key={index} data-aos="fade-up"
-                data-aos-delay={index * 100}>
+                <div
+                  className="item"
+                  key={index}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                >
                   <div className="content">
                     <h4 className="year">{year}</h4>
                     <h5 className="money">{money}</h5>
