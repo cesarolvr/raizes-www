@@ -13,8 +13,8 @@ const Hero = ({
 }) => {
   const backgroundContent = {
     background: backgroundColor ? backgroundColor : `url("${backgroundPath}")`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no repeat',
+    backgroundSize: "cover",
+    backgroundRepeat: "no repeat",
   }
   return (
     <section
@@ -27,7 +27,14 @@ const Hero = ({
         style={{
           ...backgroundContent,
         }}
-      ></div>
+      >
+        <video autoPlay muted loop className="hero-video">
+          <source
+            src="https://firebasestorage.googleapis.com/v0/b/raizes-b6208.appspot.com/o/hero-video.mp4?alt=media&token=c8b97976-6e5d-44bb-b380-45ac207d764f"
+            type="video/mp4"
+          />
+        </video>
+      </div>
       <div className="container">
         <div className="hero-content">
           <p className="subtitle">{subtitle}</p>

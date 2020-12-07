@@ -10,6 +10,16 @@
     }
   }
 
+  .hero-video {
+    width: 100%;
+    min-height: 100%;
+    display: none;
+
+    @media (min-width: $m) {
+      display: block;
+    }
+  }
+
   .hero-background {
     width: 100%;
     height: 100%;
