@@ -60,15 +60,15 @@ const FormContact = () => {
                 </a>
               </li>
               <li className="item">
-                <a href="tel: (11)98293-89223">
+                <a href="tel: (11) 3704-0030">
                   <FontAwesomeIcon icon={faPhoneAlt} />
-                  (11)98293-89223
+                  (11) 3704-0030
                 </a>
               </li>
               <li className="item">
-                <a href="tel: (11)98293-89223">
+                <a href="tel: (11) 3704-0030">
                   <FontAwesomeIcon icon={faMobileAlt} />
-                  (11)98293-89223
+                  (11) 3704-0030
                 </a>
               </li>
             </ul>
