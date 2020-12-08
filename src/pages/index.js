@@ -55,7 +55,7 @@ const Home = () => {
         list={[
           {
             image: image1,
-            title: "Antecipação de recebíveis",
+            title: "Antecipação de Recebíveis",
             description: "Modalidade de crédito para fluxo financeiro diário",
             link: "/antecipacao-de-recebiveis/",
           },
@@ -75,19 +75,19 @@ const Home = () => {
           },
           {
             image: image4,
-            title: "Home equity",
+            title: "Home Equity",
             description: "Modalidade de credito para prazos mais longos",
             link: "/home-equity/",
           },
           {
             image: image5,
-            title: "Domicílio bancário",
+            title: "Domicílio Bancário",
             description: "Modalidade para aumentar a liquidez dos recebíveis",
             link: "/domicilio-bancario/",
           },
           {
             image: image6,
-            title: "Antecipação de contratos",
+            title: "Antecipação de Contratos",
             description:
               "Antecipe contratos de suprimento ou prestação de serviços",
             link: "/antecipacao-de-contratos/",

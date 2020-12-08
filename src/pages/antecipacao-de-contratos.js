@@ -183,7 +183,7 @@ export default () => {
         list={[
           {
             image: image1,
-            title: "Domicílio bancário",
+            title: "Domicílio Bancário",
             description: "Modalidade para aumentar a liquidez dos recebíveis",
             link: "/domicilio-bancario/",
           },
@@ -196,7 +196,7 @@ export default () => {
           },
           {
             image: image3,
-            title: "Antecipação de recebíveis",
+            title: "Antecipação de Recebíveis",
             description: "Modalidade de credito para fluxo financeiro diário",
             link: "/antecipacao-de-recebiveis/",
           },

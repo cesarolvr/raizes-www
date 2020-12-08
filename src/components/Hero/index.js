@@ -40,10 +40,10 @@ const Hero = ({
       </div>
       <div className="container">
         <div className="hero-content">
-          <p className="subtitle">{subtitle}</p>
-          <h1 className="title">{title}</h1>
-          <hr className="divider" />
-          <p className="description">{description}</p>
+          <p className="subtitle" data-aos="fade-up" data-aos-delay={50}>{subtitle}</p>
+          <h1 className="title" data-aos="fade-up" data-aos-delay={100}>{title}</h1>
+          <hr className="divider" data-aos="fade-up" data-aos-delay={150} />
+          <p className="description" data-aos="fade-up" data-aos-delay={250}>{description}</p>
         </div>
       </div>
     </section>

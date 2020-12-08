@@ -352,7 +352,7 @@ export default () => {
           },
           {
             image: image3,
-            title: "Antecipação de recebíveis",
+            title: "Antecipação de Recebíveis",
             description: "Modalidade de credito para fluxo financeiro diário",
             link: "/antecipacao-de-recebiveis/",
           },

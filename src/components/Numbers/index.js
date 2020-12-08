@@ -15,7 +15,7 @@ const Numbers = () => {
         </div>
         <ol className="numbers-list">
           <li className="item" data-aos="fade-up" data-aos-delay={100}>
-            <p className="value">6</p>
+            <p className="value">7</p>
             <p className="subtitle">Anos de mercado</p>
           </li>
           <li className="item" data-aos="fade-up" data-aos-delay={150} >
@@ -24,7 +24,7 @@ const Numbers = () => {
           </li>
           <li className="item" data-aos="fade-up" data-aos-delay={200}>
             <p className="value">
-              800<small>MM</small>
+              1<small>BI</small>
             </p>
             <p className="subtitle">em aprovações de crédito</p>
           </li>

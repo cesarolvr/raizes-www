@@ -36,12 +36,12 @@ const Partners = ({
   return (
     <section className="section partners-section">
       <div className="container">
-        <h2 className="title">Nossa estrutura</h2>
+        <h2 className="title" data-aos="fade-up" data-aos-delay={50}>Nossa estrutura</h2>
         <hr className="divider" />
         <ol className="partners-list">
           {list.map((item, index) => {
             return (
-              <div className="item" key={index}>
+              <div className="item" key={index} data-aos="fade-up" data-aos-delay={index * 50}>
                 <img src={item} key={index} alt="" />
               </div>
             )

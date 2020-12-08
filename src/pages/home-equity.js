@@ -23,14 +23,14 @@ export default () => {
       <Header />
       <Hero
         backgroundPath={backgroundPath}
-        title="Home equity"
+        title="Home Equity"
         subtitle="Produtos"
         description="Modalidade de credito para prazos mais longos"
       />
       <article className="article">
         <div className="container">
           <p>
-            Home equity é o termo em inglês para a modalidade de empréstimo com
+            Home Equity é o termo em inglês para a modalidade de empréstimo com
             imóvel de garantia. Ele funciona da seguinte forma: uma empresa que
             busca crédito em alguma instituição financeira aceita ceder um
             imóvel quitado e em seu nome à instituição como forma de garantia
@@ -107,7 +107,7 @@ export default () => {
         list={[
           {
             image: image1,
-            title: "Domicílio bancário",
+            title: "Domicílio Bancário",
             description: "Modalidade para aumentar a liquidez dos recebíveis",
             link: "/domicilio-bancario/",
           },
@@ -120,7 +120,7 @@ export default () => {
           },
           {
             image: image3,
-            title: "Antecipação de recebíveis",
+            title: "Antecipação de Recebíveis",
             description: "Modalidade de credito para fluxo financeiro diário",
             link: "/antecipacao-de-recebiveis/",
           },
