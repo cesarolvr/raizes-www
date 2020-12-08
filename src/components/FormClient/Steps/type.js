@@ -26,7 +26,7 @@ const Type = ({ setType }) => {
             icon: faArrowRight,
           },
           {
-            text: "Cédula de Produto Rural",
+            text: "Cédula de Produtor Rural",
             icon: faArrowRight,
           },
           {

@@ -51,7 +51,7 @@ export const products = {
   },
   3: {
     slug: "cedula-de-produto-rural",
-    title: "Cédula de Produto Rural",
+    title: "Cédula de Produtor Rural",
   },
   4: {
     slug: "antecipacao-de-contratos",

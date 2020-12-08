@@ -38,14 +38,14 @@ export default () => {
             agronegócio por financiamento. Diante dessa situação, o poder
             público entendeu a necessidade da participação de investidores
             privados para o melhor desenvolvimento do setor. Neste contexto, a
-            lei 8.929/94 introduziu a Cédula de Produto Rural (CPR), que logo
+            lei 8.929/94 introduziu a Cédula de Produtor Rural (CPR), que logo
             passou a fazer parte do cotidiano no mundo do agronegócio. Uma vez
             que apresenta a possibilidade de que sua liquidação se dê de maneira
             física ou financeira, como veremos a seguir, esta se mostra um
             importante instrumento por conta de sua flexibilidade, podendo ser
             utilizado para diversas finalidades: aquisição de produtos e
             insumos, financiamento de produção, prestação de garantia, dentre
-            outras. 2) Cédula de Produto Rural De acordo com o art. 1º da lei
+            outras. 2) Cédula de Produtor Rural De acordo com o art. 1º da lei
             antes mencionada, a CPR é um título líquido e certo que representa a
             "promessa de entrega de produtos rurais" feita por seu emitente. A
             CPR de liquidação física não apresenta um preço, simplesmente
@@ -95,9 +95,9 @@ export default () => {
             endossante não responde pelo cumprimento da obrigação de entregar o
             produto, mas somente por sua existência; e não se exige o protesto
             do título para se assegurar o direito de regresso contra os
-            avalistas. 3) Cédula de Produto Rural Financeira (CPRF) Com a lei
+            avalistas. 3) Cédula de Produtor Rural Financeira (CPRF) Com a lei
             10.200/01, foi incluído à lei 8.929/94 o Artigo 4-A, que criou a
-            Cédula de Produto Rural Financeira. Enquanto a CPR Física apenas
+            Cédula de Produtor Rural Financeira. Enquanto a CPR Física apenas
             descrimina a quantidade e a qualidade de um produto a ser entregue,
             a CPR Financeira vai além e apresenta um método para a obtenção de
             um valor, com base em um preço ou índice de preços a ser
@@ -125,7 +125,7 @@ export default () => {
             instituições idôneas e de credibilidade com divulgação periódica da
             cotação dos produtos objetos da CPR; as partes tenham fácil acesso
             aos dados a serem utilizados para fixação do preço; esteja presente
-            a palavra "financeira" após a denominação "Cédula de Produto Rural".
+            a palavra "financeira" após a denominação "Cédula de Produtor Rural".
             Logo, podemos notar que a maior diferença entre a CPR Física e a CPR
             Financeira reside na forma de liquidação. Enquanto na CPR Física
             ocorre a liquidação através da entrega dos produtos na quantidade e

@@ -68,7 +68,7 @@ const Home = () => {
           },
           {
             image: image3,
-            title: "Cédula de produto rural",
+            title: "Cédula de Produtor Rural",
             description:
               "Modalidade de crédito perfeita para produtores rurais",
             link: "/cedula-de-produto-rural/",
