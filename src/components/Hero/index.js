@@ -32,7 +32,7 @@ const Hero = ({
         {backgroundVideo && (
           <video autoPlay muted loop className="hero-video">
             <source
-              src="https://firebasestorage.googleapis.com/v0/b/raizes-b6208.appspot.com/o/hero-video.mp4?alt=media&token=c8b97976-6e5d-44bb-b380-45ac207d764f"
+              src="https://firebasestorage.googleapis.com/v0/b/raizes-b6208.appspot.com/o/hero-video.mp4?alt=media&token=90dbb569-0e95-4bc7-bfdc-03c717230e10"
               type="video/mp4"
             />
           </video>
