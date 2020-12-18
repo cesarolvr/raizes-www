@@ -19,19 +19,22 @@ const Layout = ({ children, className }) => {
     })
   }, [])
   return (
-    <main className={className}>
-      <>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-P248NMQ"
-            height="0"
-            width="0"
-            style="display:none;visibility:hidden"
-          ></iframe>
-        </noscript>
-        {children}
-      </>
-    </main>
+    <>
+      {() => {
+        if (!(window && document)) return
+        return (
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-P248NMQ"
+              height="0"
+              width="0"
+              style="display:none;visibility:hidden"
+            ></iframe>
+          </noscript>
+        )
+      }}
+      <main className={className}>{children}</main>
+    </>
   )
 }
 
