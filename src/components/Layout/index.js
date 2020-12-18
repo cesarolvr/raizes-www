@@ -3,11 +3,12 @@ import AOS from "aos"
 
 // Styles
 import "aos/dist/aos.css"
-
-// Styles
 import "./Base.scss"
 import "./Helpers.scss"
 import "./Layout.scss"
+
+// Utils
+import isClient from '../../utils/isClient'
 
 const Layout = ({ children, className }) => {
   useEffect(() => {
@@ -20,19 +21,16 @@ const Layout = ({ children, className }) => {
   }, [])
   return (
     <>
-      {() => {
-        if (!(window && document)) return
-        return (
-          <noscript>
-            <iframe
-              src="https://www.googletagmanager.com/ns.html?id=GTM-P248NMQ"
-              height="0"
-              width="0"
-              style="display:none;visibility:hidden"
-            ></iframe>
-          </noscript>
-        )
-      }}
+      {isClient() && (
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P248NMQ"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"
+          ></iframe>
+        </noscript>
+      )}
       <main className={className}>{children}</main>
     </>
   )
