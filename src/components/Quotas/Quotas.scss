@@ -40,8 +40,20 @@
       }
 
       .name {
-        margin: 0 0 15px;
+        margin: 0 0 0px;
         font-weight: bold;
+      }
+
+      .info {
+        margin: 0;
+        font-size: .8rem;
+        line-height: 1rem;
+      }
+
+      .subtitle {
+        margin-top: 20px;
+        margin-bottom: 0px;
+        color: $gray-7
       }
 
       .price {

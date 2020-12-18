@@ -18,7 +18,21 @@ const Layout = ({ children, className }) => {
       easing: "ease",
     })
   }, [])
-  return <main className={className}>{children}</main>
+  return (
+    <main className={className}>
+      <>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P248NMQ"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"
+          ></iframe>
+        </noscript>
+        {children}
+      </>
+    </main>
+  )
 }
 
 export default Layout

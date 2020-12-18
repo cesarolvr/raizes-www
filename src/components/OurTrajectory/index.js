@@ -7,48 +7,51 @@ const OurTrajectory = ({
   timeline = [
     {
       year: "2014",
-      description: "Constituição da Raizes perante aos órgãos reguladores",
+      money: "Aqui começa a nossa história!",
+      description:
+        "Com o objetivo de levar segurança, retorno eficiente e qualidade no atendimento aos investidores, clientes, colaboradores e fornecedores, o Fundo Raízes foi constituído junto aos órgãos reguladores.",
     },
     {
       year: "2015",
-      money: "30 milhões",
-      complement: "em créditos concedidos",
-      description: "Inicio das operações com 30 clientes ativos ",
+      money: "30.000.000",
+      complement: "Em créditos concedidos",
+      description:
+        "Iniciamos nossas operações e fechamos o ano com a marca de 30 milhões de crédito concedido em uma carteira de 30 cedentes ativos.",
     },
     {
       year: "2016",
-      money: "50 milhões",
-      complement: "em créditos concedidos",
+      money: "50.000.000",
+      complement: "Em créditos concedidos",
       description:
-        "Implementação de 3 sistemas gerenciais e de Risco para a analise de decisão. ",
+        "Este foi um ano de investimento em tecnologia. Estruturamos nossa área de Gestão de Risco com profissionais qualificados e sistemas de análise e operação.",
     },
     {
       year: "2017",
-      money: "107 milhões",
-      complement: "em créditos concedidos",
+      money: "107.000.000",
+      complement: "Em créditos concedidos",
       description:
-        "Desenvolvimento do Banco Digital Raizes, melhoria constante em nossos processos de gestão e risco. 85 clientes ativos.",
+        "Como parte complementar da nossa estrutura digital, desenvolvemos o Banco Digital Raízes. Permitindo mais agilidade e eficiência na concessão do crédito.",
     },
     {
       year: "2018",
-      money: "150 milhões",
-      complement: "em créditos concedidos",
+      money: "150.000.000",
+      complement: "Em créditos concedidos",
       description:
-        "Contratação do gestor de risco, implementação de novas politicas de governança para o mercado  institucional e investidores.  130 clientes ativos e 60 Escrows accounts abertas",
+        "Após a estruturação de toda a gestão de risco, passamos a investir na implementação de novas políticas de governança para o mercado institucional e investidores. Como resultado do Banco Digital Raízes, foram abertas 60 contas digitais e a carteira de cedentes ativos atingiu a marca de 130 empresas.",
     },
     {
       year: "2019",
-      money: "215 milhões",
-      complement: "em créditos concedidos",
+      money: "215.000.000",
+      complement: "Em créditos concedidos",
       description:
-        "Execução  e implementação do Banco Digital Raizes. 165 clientes ativos, 20 colaboradores 7 sistemas integrados sendo :ERP, CRM, Risco, LwCrow BI, SisBacen, Jusbrasil, Upminer",
+        "O Banco Digital Raízes passa a ter maior expressão, permitindo que nossos clientes operem com conta digital e forneçam aos seus colaboradores nossa linha de crédito consignado. Nossa estrutura agora conta com 20 colaboradores e 7 sistemas integrados para a gestão de risco, crédito, cobrança e operação.",
     },
     {
       year: "2020",
-      money: "180 milhões",
-      complement: "em créditos concedidos",
+      money: "190.000.000",
+      complement: "Em créditos concedidos",
       description:
-        "Implementação da Nova Plataforma Agricola visando negociação de CPR para credito Rural e Boi Gordo. Expansão comercial para o interior de MT com novas estruturas de credito",
+        "Com o mercado Agro em alta, implementamos a nossa Plataforma Agrícola, exclusiva para concessão de crédito rural através de CPR-F e Boi Gordo. Aumentamos nossa área de atuação e chegamos ao Centro Oeste do País.",
     },
   ],
 }) => {
