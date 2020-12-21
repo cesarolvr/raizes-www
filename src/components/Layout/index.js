@@ -21,7 +21,7 @@ const Layout = ({ children, className }) => {
   }, [])
   return (
     <>
-      {isClient() && (
+      {/* {isClient() && (
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-P248NMQ"
@@ -30,7 +30,7 @@ const Layout = ({ children, className }) => {
             style="display:none;visibility:hidden"
           ></iframe>
         </noscript>
-      )}
+      )} */}
       <main className={className}>{children}</main>
     </>
   )
