@@ -73,16 +73,24 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
-      {isClient() &&
-        `<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBF61C9EL9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      {isClient() && (
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-LBF61C9EL9"
+        ></script>
+      )}
 
-  gtag('config', 'G-LBF61C9EL9');
-</script>`}
+      {isClient() && (
+        <script>
+          {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'G-LBF61C9EL9');
+            `}
+        </script>
+      )}
     </Helmet>
   )
 }
