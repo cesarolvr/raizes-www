@@ -34,7 +34,7 @@ const BeAInvestor = () => {
             <br />
             <strong>Rentabilidade:</strong> a remuneração supera 300% do CDI.
             <br />
-            <strong>Gestão </strong>de Risco: toda a carteira de ativos passa por um rigoroso
+            <strong>Gestão de Risco:</strong> toda a carteira de ativos passa por um rigoroso
             processo de a análise vertical e horizontal.
           </p>
           <button className="button" data-aos="fade-up" data-aos-delay={150}>
