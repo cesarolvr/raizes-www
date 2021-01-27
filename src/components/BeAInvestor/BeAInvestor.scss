@@ -53,12 +53,5 @@
   .image-section {
     width: 100%;
     margin-bottom: 40px;
-
-    @media (min-width: $m) {
-      width: 50vw;
-      max-width: none;
-      margin: 0;
-      flex-shrink: 0;
-    }
   }
 }

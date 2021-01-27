@@ -31,7 +31,7 @@ export const links = [
   },
   {
     text: "Área do cliente",
-    to: "http://168.0.134.22:8080/netFactor/jsp/nfrInicia.jsp",
+    to: "http://168.0.134.22:8080/netFactor/jsp/nfnInicia.jsp",
     target: "_blank",
   },
 ]
